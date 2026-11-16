@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {"name": "mckesson", "employer": "McKesson", "ats": "workday",
+     "host": "mckesson.wd3.myworkdayjobs.com", "tenant": "mckesson", "site": "External_Careers"},
+    {"name": "walmart", "employer": "Walmart (incl. Sam's Club)", "ats": "workday",
+     "host": "walmart.wd5.myworkdayjobs.com", "tenant": "walmart", "site": "WalmartExternal", "search": "analyst"},
+    {"name": "jpmorgan", "employer": "JPMorgan Chase", "ats": "oracle",
+     "host": "jpmc.fa.oraclecloud.com", "site": "CX_1001", "search": "analyst"},
+    {"name": "capitalone", "employer": "Capital One", "ats": "workday",
+     "host": "capitalone.wd12.myworkdayjobs.com", "tenant": "capitalone", "site": "Capital_One"},
+    {"name": "pg", "employer": "Procter & Gamble", "ats": "workday",
+     "host": "pg.wd5.myworkdayjobs.com", "tenant": "pg", "site": "1000"},
+    {"name": "lockheedmartin", "employer": "Lockheed Martin", "ats": "workday",
+     "host": "lockheedmartin.wd1.myworkdayjobs.com", "tenant": "lockheedmartin", "site": "LMCareers"},
+    {"name": "pepsico", "employer": "PepsiCo (Frito-Lay)", "ats": "workday",
+     "host": "pepsico.wd1.myworkdayjobs.com", "tenant": "pepsico", "site": "PepsiCoJobs"},
+    {"name": "wellsfargo", "employer": "Wells Fargo", "ats": "workday",
+     "host": "wf.wd1.myworkdayjobs.com", "tenant": "wf", "site": "WellsFargoJobs", "search": "analyst"},
+    {"name": "kimberlyclark", "employer": "Kimberly-Clark", "ats": "workday",
+     "host": "kimberlyclark.wd1.myworkdayjobs.com", "tenant": "kimberlyclark", "site": "GLOBAL"}
+  ]
+}

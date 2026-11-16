@@ -1,0 +1,819 @@
+{
+ "candidates": [
+  {
+   "name": "schwab",
+   "employer": "Charles Schwab",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "schwab",
+      "charlesschwab",
+      "schwabjobs"
+     ],
+     "sites": [
+      "External",
+      "Schwab",
+      "SchwabExternal"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fidelity",
+   "employer": "Fidelity Investments",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "fmr",
+      "fidelity",
+      "fidelityinvestments"
+     ],
+     "sites": [
+      "FidelityCareers",
+      "Fidelity",
+      "External",
+      "FMR"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "jpmorgan",
+   "employer": "JPMorgan Chase",
+   "guesses": [
+    {
+     "ats": "oracle",
+     "hosts": [
+      "jpmc.fa.oraclecloud.com"
+     ],
+     "sites": [
+      "CX_1001",
+      "CX_1002",
+      "CX_1"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capitalone",
+   "employer": "Capital One",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "capitalone"
+     ],
+     "sites": [
+      "Capital_One",
+      "CapitalOne",
+      "External"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "toyota",
+   "employer": "Toyota (North America and Financial Services)",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "toyota",
+      "tmna",
+      "toyotamotorna",
+      "toyotafinancial",
+      "tfs"
+     ],
+     "sites": [
+      "TMNA",
+      "Toyota",
+      "External",
+      "TFS",
+      "ToyotaCareers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "att",
+   "employer": "AT&T",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "att",
+      "attcareers",
+      "att-mexico"
+     ],
+     "sites": [
+      "ATTGeneral",
+      "ATTCareers",
+      "ATT",
+      "External",
+      "ATTExternal"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "americanairlines",
+   "employer": "American Airlines",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "aa",
+      "americanairlines",
+      "aag"
+     ],
+     "sites": [
+      "AA",
+      "External",
+      "AmericanAirlines",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "mckesson",
+   "employer": "McKesson",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "mckesson"
+     ],
+     "sites": [
+      "External_Careers"
+     ],
+     "wds": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "name": "walmart",
+   "employer": "Walmart (incl. Sam's Club)",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "walmart"
+     ],
+     "sites": [
+      "WalmartExternal"
+     ],
+     "wds": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tyson",
+   "employer": "Tyson Foods",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "tyson",
+      "tysonfoods",
+      "tfi"
+     ],
+     "sites": [
+      "TysonCareers",
+      "Tyson",
+      "TFC",
+      "External",
+      "TysonFoods",
+      "TysonExternal"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "jbhunt",
+   "employer": "J.B. Hunt",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "jbhunt",
+      "jbhi",
+      "hunt"
+     ],
+     "sites": [
+      "JBHunt",
+      "External",
+      "JBHuntCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "arvest",
+   "employer": "Arvest Bank",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "arvest",
+      "arvestbank"
+     ],
+     "sites": [
+      "Arvest",
+      "External",
+      "ArvestCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "simmons",
+   "employer": "Simmons Foods",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "simmonsfoods",
+      "simmons"
+     ],
+     "sites": [
+      "External",
+      "SimmonsFoods",
+      "Simmons",
+      "Careers",
+      "ExternalSimmonsFoodsJobOpportunities"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "georges",
+   "employer": "George's Inc.",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "georgesinc",
+      "georges",
+      "georgesprocessing"
+     ],
+     "sites": [
+      "External",
+      "Georges",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pg",
+   "employer": "Procter & Gamble",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "pg"
+     ],
+     "sites": [
+      "1000",
+      "PGCareers",
+      "External"
+     ],
+     "wds": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "name": "lockheedmartin",
+   "employer": "Lockheed Martin",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "lockheedmartin"
+     ],
+     "sites": [
+      "LMCareers",
+      "External"
+     ],
+     "wds": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pepsico",
+   "employer": "PepsiCo (Frito-Lay)",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "pepsico"
+     ],
+     "sites": [
+      "PepsiCoJobs",
+      "External"
+     ],
+     "wds": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "kimberlyclark",
+   "employer": "Kimberly-Clark",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "kimberlyclark",
+      "kcc"
+     ],
+     "sites": [
+      "GLOBAL",
+      "External",
+      "KimberlyClark"
+     ],
+     "wds": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "wellsfargo",
+   "employer": "Wells Fargo",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "wf",
+      "wellsfargo"
+     ],
+     "sites": [
+      "WellsFargoJobs",
+      "External"
+     ],
+     "wds": [
+      1,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "name": "texasinstruments",
+   "employer": "Texas Instruments",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "ti",
+      "texasinstruments"
+     ],
+     "sites": [
+      "External",
+      "TI",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "southwest",
+   "employer": "Southwest Airlines",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "southwest",
+      "swa",
+      "southwestairlines",
+      "luv"
+     ],
+     "sites": [
+      "External",
+      "Southwest",
+      "SouthwestCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "kdp",
+   "employer": "Keurig Dr Pepper",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "kdp",
+      "keurigdrpepper",
+      "drpepper"
+     ],
+     "sites": [
+      "KDP",
+      "External",
+      "KDPCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fluor",
+   "employer": "Fluor",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "fluor"
+     ],
+     "sites": [
+      "External",
+      "Fluor",
+      "FluorCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tenet",
+   "employer": "Tenet Healthcare",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "tenethealth",
+      "tenet"
+     ],
+     "sites": [
+      "Tenet",
+      "External",
+      "TenetCareers",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "comerica",
+   "employer": "Comerica",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "comerica"
+     ],
+     "sites": [
+      "External",
+      "Comerica",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "santander",
+   "employer": "Santander Consumer / SBNA",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "santander",
+      "santanderus",
+      "sc"
+     ],
+     "sites": [
+      "External",
+      "Santander",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "jacobs",
+   "employer": "Jacobs",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "jacobs"
+     ],
+     "sites": [
+      "External",
+      "Jacobs",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cbre",
+   "employer": "CBRE",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "cbre"
+     ],
+     "sites": [
+      "CBRE",
+      "External",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "albertsons",
+   "employer": "Albertsons Companies",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "albertsons",
+      "albertsonscompanies"
+     ],
+     "sites": [
+      "External",
+      "Albertsons",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "atmos",
+   "employer": "Atmos Energy",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "atmosenergy",
+      "atmos"
+     ],
+     "sites": [
+      "External",
+      "AtmosEnergy",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "alcon",
+   "employer": "Alcon",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "alcon"
+     ],
+     "sites": [
+      "External",
+      "Alcon",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "bnsf",
+   "employer": "BNSF Railway",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "bnsf"
+     ],
+     "sites": [
+      "External",
+      "BNSF",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "rtx",
+   "employer": "RTX (Raytheon)",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "rtx",
+      "raytheon"
+     ],
+     "sites": [
+      "External",
+      "RTX",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "vistra",
+   "employer": "Vistra",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "vistracorp",
+      "vistra"
+     ],
+     "sites": [
+      "External",
+      "Vistra",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "murphyusa",
+   "employer": "Murphy USA",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "murphyusa",
+      "murphy"
+     ],
+     "sites": [
+      "External",
+      "MurphyUSA",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "builders",
+   "employer": "Builders FirstSource",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "bldr",
+      "buildersfirstsource",
+      "builders"
+     ],
+     "sites": [
+      "External",
+      "BFS",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "dallasfed",
+   "employer": "Federal Reserve Bank of Dallas",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "dallasfed",
+      "frbdallas"
+     ],
+     "sites": [
+      "External",
+      "DallasFed",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "texashealth",
+   "employer": "Texas Health Resources",
+   "guesses": [
+    {
+     "ats": "oracle",
+     "hosts": [
+      "ejpy.fa.us2.oraclecloud.com",
+      "texashealth.fa.us2.oraclecloud.com"
+     ],
+     "sites": [
+      "CX_1",
+      "CX_1001",
+      "CX"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "bswhealth",
+   "employer": "Baylor Scott & White Health",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "bswhealth",
+      "bsw"
+     ],
+     "sites": [
+      "External",
+      "BSWHealth",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "goldmansachs",
+   "employer": "Goldman Sachs",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "goldmansachs"
+     ],
+     "sites": [
+      "External",
+      "GS"
+     ],
+     "wds": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ericsson",
+   "employer": "Ericsson",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "ericsson"
+     ],
+     "sites": [
+      "External",
+      "Ericsson"
+     ],
+     "wds": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ey",
+   "employer": "EY",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "eyglobal",
+      "ey"
+     ],
+     "sites": [
+      "EYCareers",
+      "External",
+      "EY"
+     ],
+     "wds": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "deloitte",
+   "employer": "Deloitte",
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "deloitte"
+     ],
+     "sites": [
+      "External",
+      "Deloitte"
+     ],
+     "wds": [
+      1,
+      5
+     ]
+    }
+   ]
+  }
+ ]
+}
