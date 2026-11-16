@@ -72,17 +72,20 @@ Each source is one employer job board read through the applicant tracking system
 `sources.json`; adding an employer is one more entry there (no code changes). A board that lists more than 5,000
 postings is requested with a search term (last column); the pipeline refuses to read such a board without one.
 
+<!-- sources:start -->
 | Employer | Source | ATS | Board | Search term |
 |---|---|---|---|---|
-| McKesson | `mckesson` | Workday | `mckesson.wd3.myworkdayjobs.com / External_Careers` | — |
-| Walmart (incl. Sam's Club) | `walmart` | Workday | `walmart.wd5.myworkdayjobs.com / WalmartExternal` | `analyst` |
+| Fidelity Investments | `fidelity` | Workday | `fmr.wd1.myworkdayjobs.com / FidelityCareers` | — |
 | JPMorgan Chase | `jpmorgan` | Oracle Recruiting Cloud | `jpmc.fa.oraclecloud.com / CX_1001` | `analyst` |
 | Capital One | `capitalone` | Workday | `capitalone.wd12.myworkdayjobs.com / Capital_One` | — |
+| AT&T | `att` | Workday | `att.wd1.myworkdayjobs.com / ATTGeneral` | — |
+| McKesson | `mckesson` | Workday | `mckesson.wd3.myworkdayjobs.com / External_Careers` | — |
+| J.B. Hunt | `jbhunt` | Workday | `jbhunt.wd501.myworkdayjobs.com / Careers` | — |
 | Procter & Gamble | `pg` | Workday | `pg.wd5.myworkdayjobs.com / 1000` | — |
-| Lockheed Martin | `lockheedmartin` | Workday | `lockheedmartin.wd1.myworkdayjobs.com / LMCareers` | — |
-| PepsiCo (Frito-Lay) | `pepsico` | Workday | `pepsico.wd1.myworkdayjobs.com / PepsiCoJobs` | — |
-| Wells Fargo | `wellsfargo` | Workday | `wf.wd1.myworkdayjobs.com / WellsFargoJobs` | `analyst` |
 | Kimberly-Clark | `kimberlyclark` | Workday | `kimberlyclark.wd1.myworkdayjobs.com / GLOBAL` | — |
+| Wells Fargo | `wellsfargo` | Workday | `wf.wd1.myworkdayjobs.com / WellsFargoJobs` | — |
+| Southwest Airlines | `southwest` | Workday | `swa.wd1.myworkdayjobs.com / External` | — |
+<!-- sources:end -->
 
 Endpoints used (all public, no login):
 

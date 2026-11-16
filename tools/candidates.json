@@ -17,6 +17,11 @@
       "SchwabExternal"
      ]
     }
+   ],
+   "pages": [
+    "https://www.schwabjobs.com/",
+    "https://www.aboutschwab.com/careers",
+    "https://www.schwabjobs.com/search-jobs"
    ]
   },
   {
@@ -94,6 +99,11 @@
       "ToyotaCareers"
      ]
     }
+   ],
+   "pages": [
+    "https://www.toyota.com/careers/",
+    "https://careers.toyota.com/",
+    "https://www.toyotafinancial.com/careers"
    ]
   },
   {
@@ -135,6 +145,11 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://jobs.aa.com/",
+    "https://jobs.aa.com/search-jobs",
+    "https://jobs.aa.com/job/Analyst%2C-Revenue-Management-Operations-Research/88015-en_US/"
    ]
   },
   {
@@ -171,6 +186,18 @@
       5
      ]
     }
+   ],
+   "pages": [
+    "https://careers.walmart.com/",
+    "https://careers.walmart.com/us/jobs"
+   ],
+   "exact": [
+    {
+     "ats": "workday",
+     "host": "walmart.wd5.myworkdayjobs.com",
+     "tenant": "walmart",
+     "site": "WalmartExternal"
+    }
    ]
   },
   {
@@ -193,6 +220,11 @@
       "TysonExternal"
      ]
     }
+   ],
+   "pages": [
+    "https://www.tysonfoods.com/careers",
+    "https://careers.tyson.com/",
+    "https://jobs.tysonfoods.com/"
    ]
   },
   {
@@ -232,6 +264,11 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://www.arvest.com/about/careers",
+    "https://careers.arvest.com/",
+    "https://arvest.com/careers"
    ]
   },
   {
@@ -252,6 +289,11 @@
       "ExternalSimmonsFoodsJobOpportunities"
      ]
     }
+   ],
+   "pages": [
+    "https://www.simmonsfoods.com/careers",
+    "https://simmonsfoods.com/careers/",
+    "https://jobs.simmonsfoods.com/"
    ]
   },
   {
@@ -271,6 +313,11 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://www.georgesinc.com/careers",
+    "https://georgesinc.com/careers",
+    "https://www.georgesinc.com/careers/search-jobs"
    ]
   },
   {
@@ -310,6 +357,9 @@
       1
      ]
     }
+   ],
+   "pages": [
+    "https://www.lockheedmartinjobs.com/"
    ]
   },
   {
@@ -329,6 +379,10 @@
       1
      ]
     }
+   ],
+   "pages": [
+    "https://www.pepsicojobs.com/main/jobs",
+    "https://www.pepsicojobs.com/"
    ]
   },
   {
@@ -389,6 +443,10 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://careers.ti.com/",
+    "https://careers.ti.com/search-jobs"
    ]
   },
   {
@@ -430,6 +488,10 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://careers.keurigdrpepper.com/",
+    "https://careers.keurigdrpepper.com/en/search-jobs"
    ]
   },
   {
@@ -448,6 +510,10 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://jobs.fluor.com/",
+    "https://www.fluor.com/careers"
    ]
   },
   {
@@ -467,6 +533,9 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://jobs.tenethealth.com/"
    ]
   },
   {
@@ -484,6 +553,9 @@
       "Careers"
      ]
     }
+   ],
+   "pages": [
+    "https://www.comerica.com/about-comerica/careers.html"
    ]
   },
   {
@@ -811,6 +883,316 @@
      "wds": [
       1,
       5
+     ]
+    }
+   ]
+  },
+  {
+   "name": "lennox",
+   "employer": "Lennox International",
+   "pages": [
+    "https://www.lennoxcareers.com/"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "lennox",
+      "lennoxinternational"
+     ],
+     "sites": [
+      "External",
+      "Lennox",
+      "LennoxCareers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tyler",
+   "employer": "Tyler Technologies",
+   "pages": [
+    "https://www.tylertech.com/about/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "tylertech",
+      "tyler"
+     ],
+     "sites": [
+      "External",
+      "Careers",
+      "TylerTech"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "celanese",
+   "employer": "Celanese",
+   "pages": [
+    "https://www.celanese.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "celanese"
+     ],
+     "sites": [
+      "External",
+      "Celanese",
+      "CelaneseCareers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "mrcooper",
+   "employer": "Mr. Cooper Group",
+   "pages": [
+    "https://www.mrcoopergroup.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "mrcooper",
+      "mrcoopergroup"
+     ],
+     "sites": [
+      "External",
+      "MrCooper",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "sabre",
+   "employer": "Sabre",
+   "pages": [
+    "https://www.sabre.com/careers/"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "sabre"
+     ],
+     "sites": [
+      "SabreJobs",
+      "External",
+      "Sabre"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "7eleven",
+   "employer": "7-Eleven",
+   "pages": [
+    "https://www.7-eleven.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "7eleven",
+      "sevenelevenhq"
+     ],
+     "sites": [
+      "External",
+      "7Eleven",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "gmfinancial",
+   "employer": "GM Financial",
+   "pages": [
+    "https://www.gmfinancial.com/en-us/careers.html"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "gmfinancial",
+      "gmfc"
+     ],
+     "sites": [
+      "External",
+      "GMFinancial",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fanniemae",
+   "employer": "Fannie Mae",
+   "pages": [
+    "https://www.fanniemae.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "fanniemae"
+     ],
+     "sites": [
+      "External",
+      "FannieMae",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "frontier",
+   "employer": "Frontier Communications",
+   "pages": [
+    "https://www.frontier.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "frontier",
+      "ftr"
+     ],
+     "sites": [
+      "External",
+      "Frontier",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "usaa",
+   "employer": "USAA",
+   "pages": [
+    "https://www.usaajobs.com/"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "usaa"
+     ],
+     "sites": [
+      "External",
+      "USAA",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "libertymutual",
+   "employer": "Liberty Mutual",
+   "pages": [
+    "https://jobs.libertymutualgroup.com/"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "libertymutual",
+      "lmg"
+     ],
+     "sites": [
+      "External",
+      "LibertyMutual",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "drhorton",
+   "employer": "D.R. Horton",
+   "pages": [
+    "https://www.drhorton.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "drhorton"
+     ],
+     "sites": [
+      "External",
+      "DRHorton",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cinemark",
+   "employer": "Cinemark",
+   "pages": [
+    "https://www.cinemark.com/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "cinemark"
+     ],
+     "sites": [
+      "External",
+      "Cinemark",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "texascapital",
+   "employer": "Texas Capital Bank",
+   "pages": [
+    "https://www.texascapital.com/about/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "texascapital",
+      "texascapitalbank"
+     ],
+     "sites": [
+      "External",
+      "TexasCapital",
+      "Careers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "textron",
+   "employer": "Textron (Bell)",
+   "pages": [
+    "https://www.bellflight.com/company/careers"
+   ],
+   "guesses": [
+    {
+     "ats": "workday",
+     "tenants": [
+      "textron",
+      "bell"
+     ],
+     "sites": [
+      "Textron",
+      "Bell",
+      "External",
+      "BellCareers"
      ]
     }
    ]

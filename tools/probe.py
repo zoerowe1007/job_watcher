@@ -4,8 +4,9 @@ This is a setup helper, not part of the daily pipeline. It tries the guesses in
 tools/candidates.json and writes what worked to data/probe.json, so that
 sources.json can be filled with boards that are known to respond.
 
-    python tools/probe.py                 # all candidates
+    python tools/probe.py                    # candidates that have not answered yet
     python tools/probe.py walmart jpmorgan   # only these names
+    python tools/probe.py --all              # everything again
 
 (It reads a company's front page only to learn the Workday site name from the
 redirect address. The pipeline itself never reads HTML.)
@@ -13,6 +14,7 @@ redirect address. The pipeline itself never reads HTML.)
 import json
 import re
 import sys
+import threading
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -28,8 +30,54 @@ COMMON_SITES = ["External", "Careers", "ExternalCareers", "External_Career_Site"
 LOCALE = re.compile(r"^[a-z]{2}(-[A-Za-z]{2})?$")
 
 
+CTX = threading.local()
+
+
+def note_error(url, exc):
+    """Remember why a request failed, so a silent miss can be explained later."""
+    errs = getattr(CTX, "errors", None)
+    if errs is not None and len(errs) < 4:
+        errs.append(f"{url.split('?')[0][:110]} -> {str(exc)[:90]}")
+
+
 def once(url, data=None, timeout=20):
-    return request_json(url, data=data, retries=1, timeout=timeout)
+    try:
+        return request_json(url, data=data, retries=1, timeout=timeout)
+    except Exception as exc:  # noqa: BLE001
+        note_error(url, exc)
+        raise
+
+
+WORKDAY_LINK = re.compile(
+    r"https?://([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:wday/cxs/[a-z0-9-]+/)?(?:[a-z]{2}-[A-Za-z]{2}/)?([A-Za-z0-9_.-]+)", re.I)
+ORACLE_LINK = re.compile(r"https?://([a-z0-9-]+\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)(?:/hcmUI/CandidateExperience/[a-z]{2}(?:-[A-Z]{2})?)?(?:/sites/([A-Za-z0-9_]+))?", re.I)
+SKIP_SITES = {"wday", "assets", "favicon.ico", "login", "en-us", "en"}
+
+
+def scrape_links(url, timeout=25):
+    """Read one public careers page and return the applicant-system addresses it mentions."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,*/*"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            text = resp.read(2_500_000).decode("utf-8", "replace")
+    except Exception as exc:  # noqa: BLE001
+        note_error(url, exc)
+        return []
+    text = text.replace("\\/", "/").replace("&#x2F;", "/")
+    found, seen = [], set()
+    for tenant, wd, site in WORKDAY_LINK.findall(text):
+        if site.lower() in SKIP_SITES:
+            continue
+        key = ("workday", tenant.lower(), wd.lower(), site)
+        if key not in seen:
+            seen.add(key)
+            found.append({"ats": "workday", "host": f"{tenant}.{wd}.myworkdayjobs.com", "tenant": tenant, "site": site})
+    for host, site in ORACLE_LINK.findall(text):
+        key = ("oracle", host.lower(), site)
+        if key not in seen:
+            seen.add(key)
+            found.append({"ats": "oracle", "host": host, "site": site or ""})
+    return found[:8]
 
 
 def sites_from_redirect(host, timeout=15):
@@ -122,37 +170,90 @@ def probe_simple(guess):
     return out
 
 
+def probe_exact(link):
+    """Test one address that was read from a careers page."""
+    if link["ats"] == "workday":
+        total, sample = try_workday(link["host"], link["tenant"], link["site"])
+        try:
+            analyst, _ = try_workday(link["host"], link["tenant"], link["site"], "analyst")
+        except Exception:  # noqa: BLE001
+            analyst = None
+        return [dict(link, total=total, total_with_search_analyst=analyst, sample=sample)]
+    sites = ([link["site"]] if link.get("site") else []) + ["CX_1001", "CX_1", "CX_1002", "CX"]
+    return probe_oracle({"hosts": [link["host"]], "sites": sites})
+
+
 def probe_candidate(cand):
+    CTX.errors = []
     working = []
-    for guess in cand["guesses"]:
-        ats = guess["ats"]
-        if ats == "workday":
-            working += probe_workday(guess)
-        elif ats == "oracle":
-            working += probe_oracle(guess)
-        else:
-            working += probe_simple(guess)
+    for link in cand.get("exact", []):
+        try:
+            working += probe_exact(link)
+        except Exception:  # noqa: BLE001
+            continue
         if working:
             break
-    return {"name": cand["name"], "employer": cand["employer"], "found": working}
+    if not working:
+        for page in cand.get("pages", []):
+            for link in scrape_links(page):
+                try:
+                    working += probe_exact(link)
+                except Exception:  # noqa: BLE001
+                    continue
+                if working:
+                    break
+            if working:
+                break
+    if not working:
+        for guess in cand.get("guesses", []):
+            ats = guess["ats"]
+            if ats == "workday":
+                working += probe_workday(guess)
+            elif ats == "oracle":
+                working += probe_oracle(guess)
+            else:
+                working += probe_simple(guess)
+            if working:
+                break
+    out = {"name": cand["name"], "employer": cand["employer"], "found": working}
+    if not working:
+        out["errors"] = list(CTX.errors)
+    return out
 
 
 def main(argv):
+    """With no names, retry only the candidates that have not answered yet (--all redoes everything)."""
     cands = json.loads((ROOT / "tools" / "candidates.json").read_text(encoding="utf-8"))["candidates"]
-    if argv:
-        cands = [c for c in cands if c["name"] in argv]
+    out_path = ROOT / "data" / "probe.json"
+    previous = {}
+    if out_path.exists():
+        try:
+            previous = {r["name"]: r for r in json.loads(out_path.read_text(encoding="utf-8"))["results"]}
+        except Exception:  # noqa: BLE001
+            previous = {}
+    redo_all = "--all" in argv
+    names = [a for a in argv if not a.startswith("--")]
+    if names:
+        todo = [c for c in cands if c["name"] in names]
+    elif redo_all:
+        todo = cands
+    else:
+        todo = [c for c in cands if not previous.get(c["name"], {}).get("found")]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        results = list(pool.map(probe_candidate, cands))
+        fresh = {r["name"]: r for r in pool.map(probe_candidate, todo)}
+    results = []
+    for c in cands:
+        results.append(fresh.get(c["name"]) or previous.get(c["name"]) or {"name": c["name"], "employer": c["employer"], "found": []})
     out = {"run_time": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "results": results}
     (ROOT / "data").mkdir(exist_ok=True)
-    (ROOT / "data" / "probe.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    out_path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     for r in results:
         if r["found"]:
             f = r["found"][0]
             where = f.get("host") or f.get("board") or f.get("company")
             print(f"OK    {r['name']:18} {f['ats']:10} {where} {f.get('site', '')}  total={f['total']}")
         else:
-            print(f"--    {r['name']:18} nothing answered")
+            print(f"--    {r['name']:18} nothing answered  {'; '.join(r.get('errors', []))[:200]}")
     print(f"{sum(1 for r in results if r['found'])}/{len(results)} candidates answered")
 
 
