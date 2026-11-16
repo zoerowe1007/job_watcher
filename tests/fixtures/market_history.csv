@@ -1,0 +1,362 @@
+posting_id,source,source_id,employer,title,location,department,posted_date,url,in_role,first_run,first_seen,last_seen,status,removed_date
+acme:0,acme,0,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/0,true,true,2026-10-01,2026-10-06,removed,2026-10-07
+acme:10,acme,10,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/10,false,true,2026-10-01,2026-10-17,removed,2026-10-18
+acme:100,acme,100,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/100,false,false,2026-10-15,2026-10-30,open,
+acme:101,acme,101,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/101,true,false,2026-10-15,2026-10-19,removed,2026-10-20
+acme:102,acme,102,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/102,false,false,2026-10-16,2026-10-17,removed,2026-10-18
+acme:103,acme,103,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/103,true,false,2026-10-16,2026-10-18,removed,2026-10-19
+acme:104,acme,104,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/104,true,false,2026-10-16,2026-10-16,removed,2026-10-17
+acme:105,acme,105,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/105,true,false,2026-10-16,2026-10-30,open,
+acme:106,acme,106,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/106,false,false,2026-10-16,2026-10-28,removed,2026-10-29
+acme:107,acme,107,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/107,true,false,2026-10-17,2026-10-24,removed,2026-10-25
+acme:108,acme,108,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/108,false,false,2026-10-17,2026-10-30,open,
+acme:109,acme,109,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/109,true,false,2026-10-18,2026-10-30,open,
+acme:11,acme,11,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/11,true,true,2026-10-01,2026-10-02,removed,2026-10-03
+acme:110,acme,110,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/110,false,false,2026-10-18,2026-10-19,removed,2026-10-20
+acme:111,acme,111,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/111,true,false,2026-10-18,2026-10-30,open,
+acme:112,acme,112,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/112,true,false,2026-10-18,2026-10-28,removed,2026-10-29
+acme:113,acme,113,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/113,true,false,2026-10-18,2026-10-20,removed,2026-10-21
+acme:114,acme,114,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/114,false,false,2026-10-19,2026-10-30,open,
+acme:115,acme,115,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/115,true,false,2026-10-19,2026-10-23,removed,2026-10-24
+acme:116,acme,116,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/116,false,false,2026-10-19,2026-10-30,open,
+acme:117,acme,117,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/117,true,false,2026-10-20,2026-10-21,removed,2026-10-22
+acme:118,acme,118,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/118,false,false,2026-10-21,2026-10-30,open,
+acme:119,acme,119,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/119,true,false,2026-10-21,2026-10-30,open,
+acme:120,acme,120,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/120,true,false,2026-10-21,2026-10-26,removed,2026-10-27
+acme:121,acme,121,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/121,true,false,2026-10-21,2026-10-25,removed,2026-10-26
+acme:122,acme,122,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/122,false,false,2026-10-22,2026-10-30,open,
+acme:123,acme,123,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/123,true,false,2026-10-23,2026-10-27,removed,2026-10-28
+acme:124,acme,124,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/124,false,false,2026-10-23,2026-10-29,removed,2026-10-30
+acme:125,acme,125,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/125,true,false,2026-10-23,2026-10-30,open,
+acme:126,acme,126,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/126,false,false,2026-10-23,2026-10-30,open,
+acme:127,acme,127,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/127,true,false,2026-10-23,2026-10-30,open,
+acme:128,acme,128,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/128,true,false,2026-10-23,2026-10-30,open,
+acme:129,acme,129,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/129,true,false,2026-10-24,2026-10-30,open,
+acme:13,acme,13,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/13,true,true,2026-10-01,2026-10-08,removed,2026-10-09
+acme:130,acme,130,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/130,false,false,2026-10-24,2026-10-25,removed,2026-10-26
+acme:131,acme,131,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/131,true,false,2026-10-24,2026-10-30,open,
+acme:132,acme,132,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/132,false,false,2026-10-24,2026-10-28,removed,2026-10-29
+acme:133,acme,133,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/133,true,false,2026-10-24,2026-10-27,removed,2026-10-28
+acme:134,acme,134,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/134,false,false,2026-10-24,2026-10-24,removed,2026-10-25
+acme:135,acme,135,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/135,true,false,2026-10-25,2026-10-30,open,
+acme:136,acme,136,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/136,true,false,2026-10-25,2026-10-30,open,
+acme:137,acme,137,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/137,true,false,2026-10-25,2026-10-25,removed,2026-10-26
+acme:138,acme,138,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/138,false,false,2026-10-25,2026-10-30,open,
+acme:139,acme,139,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/139,true,false,2026-10-25,2026-10-30,open,
+acme:14,acme,14,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/14,false,true,2026-10-01,2026-10-26,removed,2026-10-27
+acme:140,acme,140,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/140,false,false,2026-10-25,2026-10-30,open,
+acme:141,acme,141,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/141,true,false,2026-10-26,2026-10-30,open,
+acme:142,acme,142,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/142,false,false,2026-10-26,2026-10-30,open,
+acme:143,acme,143,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/143,true,false,2026-10-26,2026-10-30,open,
+acme:144,acme,144,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/144,true,false,2026-10-26,2026-10-30,open,
+acme:145,acme,145,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/145,true,false,2026-10-26,2026-10-30,open,
+acme:146,acme,146,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/146,false,false,2026-10-26,2026-10-27,removed,2026-10-28
+acme:147,acme,147,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/147,true,false,2026-10-27,2026-10-27,removed,2026-10-28
+acme:148,acme,148,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/148,false,false,2026-10-27,2026-10-28,removed,2026-10-29
+acme:149,acme,149,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/149,true,false,2026-10-28,2026-10-30,open,
+acme:15,acme,15,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/15,true,true,2026-10-01,2026-10-08,removed,2026-10-09
+acme:150,acme,150,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/150,false,false,2026-10-28,2026-10-29,removed,2026-10-30
+acme:151,acme,151,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/151,true,false,2026-10-28,2026-10-30,open,
+acme:152,acme,152,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/152,true,false,2026-10-29,2026-10-30,open,
+acme:153,acme,153,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/153,true,false,2026-10-29,2026-10-30,open,
+acme:154,acme,154,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/154,false,false,2026-10-29,2026-10-30,open,
+acme:16,acme,16,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/16,true,true,2026-10-01,2026-10-15,removed,2026-10-16
+acme:17,acme,17,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/17,true,true,2026-10-01,2026-10-30,open,
+acme:18,acme,18,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/18,false,true,2026-10-01,2026-10-01,removed,2026-10-02
+acme:2,acme,2,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/2,false,true,2026-10-01,2026-10-30,open,
+acme:20,acme,20,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/20,false,true,2026-10-01,2026-10-13,removed,2026-10-14
+acme:21,acme,21,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/21,true,true,2026-10-01,2026-10-09,removed,2026-10-10
+acme:22,acme,22,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/22,false,true,2026-10-01,2026-10-30,open,
+acme:23,acme,23,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/23,true,true,2026-10-01,2026-10-10,removed,2026-10-11
+acme:24,acme,24,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/24,true,true,2026-10-01,2026-10-01,removed,2026-10-02
+acme:25,acme,25,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/25,true,true,2026-10-01,2026-10-09,removed,2026-10-10
+acme:26,acme,26,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/26,false,true,2026-10-01,2026-10-21,removed,2026-10-22
+acme:27,acme,27,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/27,true,true,2026-10-01,2026-10-03,removed,2026-10-04
+acme:28,acme,28,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/28,false,true,2026-10-01,2026-10-30,open,
+acme:29,acme,29,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/29,true,true,2026-10-01,2026-10-30,open,
+acme:3,acme,3,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/3,true,true,2026-10-01,2026-10-10,removed,2026-10-11
+acme:30,acme,30,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/30,false,true,2026-10-01,2026-10-01,removed,2026-10-02
+acme:31,acme,31,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/31,true,true,2026-10-01,2026-10-04,removed,2026-10-05
+acme:32,acme,32,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/32,true,true,2026-10-01,2026-10-03,removed,2026-10-04
+acme:33,acme,33,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/33,true,true,2026-10-01,2026-10-13,removed,2026-10-14
+acme:34,acme,34,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/34,false,true,2026-10-01,2026-10-09,removed,2026-10-10
+acme:35,acme,35,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/35,true,true,2026-10-01,2026-10-05,removed,2026-10-06
+acme:36,acme,36,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/36,false,true,2026-10-01,2026-10-18,removed,2026-10-19
+acme:37,acme,37,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/37,true,true,2026-10-01,2026-10-29,removed,2026-10-30
+acme:38,acme,38,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/38,false,true,2026-10-01,2026-10-26,removed,2026-10-27
+acme:39,acme,39,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/39,true,true,2026-10-01,2026-10-29,removed,2026-10-30
+acme:4,acme,4,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/4,false,true,2026-10-01,2026-10-08,removed,2026-10-09
+acme:40,acme,40,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/40,true,true,2026-10-01,2026-10-10,removed,2026-10-11
+acme:41,acme,41,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/41,true,true,2026-10-01,2026-10-09,removed,2026-10-10
+acme:42,acme,42,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/42,false,true,2026-10-01,2026-10-12,removed,2026-10-13
+acme:43,acme,43,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/43,true,true,2026-10-01,2026-10-04,removed,2026-10-05
+acme:44,acme,44,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/44,false,true,2026-10-01,2026-10-07,removed,2026-10-08
+acme:45,acme,45,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/45,true,false,2026-10-02,2026-10-15,removed,2026-10-16
+acme:46,acme,46,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/46,false,false,2026-10-02,2026-10-30,open,
+acme:47,acme,47,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/47,true,false,2026-10-02,2026-10-22,removed,2026-10-23
+acme:48,acme,48,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/48,true,false,2026-10-02,2026-10-11,removed,2026-10-12
+acme:49,acme,49,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/49,true,false,2026-10-02,2026-10-09,removed,2026-10-10
+acme:5,acme,5,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/5,true,true,2026-10-01,2026-10-21,removed,2026-10-22
+acme:50,acme,50,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/50,false,false,2026-10-02,2026-10-18,removed,2026-10-19
+acme:51,acme,51,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/51,true,false,2026-10-03,2026-10-04,removed,2026-10-05
+acme:52,acme,52,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/52,false,false,2026-10-03,2026-10-08,removed,2026-10-09
+acme:53,acme,53,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/53,true,false,2026-10-03,2026-10-08,removed,2026-10-09
+acme:54,acme,54,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/54,false,false,2026-10-03,2026-10-25,removed,2026-10-26
+acme:55,acme,55,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/55,true,false,2026-10-03,2026-10-07,removed,2026-10-08
+acme:56,acme,56,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/56,true,false,2026-10-03,2026-10-04,removed,2026-10-05
+acme:57,acme,57,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/57,true,false,2026-10-04,2026-10-30,open,
+acme:58,acme,58,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/58,false,false,2026-10-05,2026-10-17,removed,2026-10-18
+acme:59,acme,59,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/59,true,false,2026-10-05,2026-10-12,removed,2026-10-13
+acme:6,acme,6,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/6,false,true,2026-10-01,2026-10-06,removed,2026-10-07
+acme:60,acme,60,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/60,false,false,2026-10-06,2026-10-16,removed,2026-10-17
+acme:61,acme,61,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/61,true,false,2026-10-06,2026-10-23,removed,2026-10-24
+acme:62,acme,62,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/62,false,false,2026-10-06,2026-10-13,removed,2026-10-14
+acme:63,acme,63,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/63,true,false,2026-10-06,2026-10-06,removed,2026-10-07
+acme:64,acme,64,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/64,true,false,2026-10-06,2026-10-11,removed,2026-10-12
+acme:65,acme,65,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/65,true,false,2026-10-06,2026-10-30,open,
+acme:66,acme,66,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/66,false,false,2026-10-08,2026-10-14,removed,2026-10-15
+acme:67,acme,67,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/67,true,false,2026-10-08,2026-10-12,removed,2026-10-13
+acme:68,acme,68,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/68,false,false,2026-10-08,2026-10-18,removed,2026-10-19
+acme:69,acme,69,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/69,true,false,2026-10-08,2026-10-30,open,
+acme:7,acme,7,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/7,true,true,2026-10-01,2026-10-09,removed,2026-10-10
+acme:70,acme,70,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/70,false,false,2026-10-08,2026-10-30,open,
+acme:71,acme,71,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/71,true,false,2026-10-08,2026-10-22,removed,2026-10-23
+acme:72,acme,72,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/72,true,false,2026-10-09,2026-10-30,open,
+acme:73,acme,73,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/73,true,false,2026-10-09,2026-10-30,open,
+acme:74,acme,74,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/74,false,false,2026-10-09,2026-10-25,removed,2026-10-26
+acme:75,acme,75,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/75,true,false,2026-10-09,2026-10-09,removed,2026-10-10
+acme:76,acme,76,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/76,false,false,2026-10-09,2026-10-15,removed,2026-10-16
+acme:77,acme,77,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/77,true,false,2026-10-10,2026-10-16,removed,2026-10-17
+acme:78,acme,78,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/78,false,false,2026-10-10,2026-10-10,removed,2026-10-11
+acme:79,acme,79,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/79,true,false,2026-10-10,2026-10-12,removed,2026-10-13
+acme:8,acme,8,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/8,true,true,2026-10-01,2026-10-29,removed,2026-10-30
+acme:80,acme,80,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/80,true,false,2026-10-10,2026-10-18,removed,2026-10-19
+acme:81,acme,81,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/81,true,false,2026-10-10,2026-10-21,removed,2026-10-22
+acme:82,acme,82,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/82,false,false,2026-10-10,2026-10-15,removed,2026-10-16
+acme:83,acme,83,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/83,true,false,2026-10-11,2026-10-29,removed,2026-10-30
+acme:84,acme,84,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/84,false,false,2026-10-11,2026-10-15,removed,2026-10-16
+acme:85,acme,85,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/85,true,false,2026-10-11,2026-10-29,removed,2026-10-30
+acme:86,acme,86,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/86,false,false,2026-10-11,2026-10-30,open,
+acme:87,acme,87,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/87,true,false,2026-10-11,2026-10-13,removed,2026-10-14
+acme:88,acme,88,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/88,true,false,2026-10-11,2026-10-30,open,
+acme:89,acme,89,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/89,true,false,2026-10-12,2026-10-13,removed,2026-10-14
+acme:90,acme,90,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/90,false,false,2026-10-12,2026-10-26,removed,2026-10-27
+acme:91,acme,91,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/91,true,false,2026-10-12,2026-10-30,open,
+acme:92,acme,92,Acme,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/92,false,false,2026-10-12,2026-10-28,removed,2026-10-29
+acme:93,acme,93,Acme,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/93,true,false,2026-10-13,2026-10-25,removed,2026-10-26
+acme:94,acme,94,Acme,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/94,false,false,2026-10-13,2026-10-19,removed,2026-10-20
+acme:95,acme,95,Acme,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/acme/95,true,false,2026-10-13,2026-10-22,removed,2026-10-23
+acme:96,acme,96,Acme,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/96,true,false,2026-10-14,2026-10-14,removed,2026-10-15
+acme:97,acme,97,Acme,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/97,true,false,2026-10-14,2026-10-27,removed,2026-10-28
+acme:98,acme,98,Acme,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/98,false,false,2026-10-14,2026-10-20,removed,2026-10-21
+acme:99,acme,99,Acme,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/acme/99,true,false,2026-10-15,2026-10-20,removed,2026-10-21
+beta:101,beta,101,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/101,true,true,2026-10-01,2026-10-10,removed,2026-10-11
+beta:102,beta,102,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/102,false,true,2026-10-01,2026-10-04,removed,2026-10-05
+beta:103,beta,103,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/103,true,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:104,beta,104,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/104,true,true,2026-10-01,2026-10-24,removed,2026-10-25
+beta:105,beta,105,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/105,true,true,2026-10-01,2026-10-30,open,
+beta:106,beta,106,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/106,false,true,2026-10-01,2026-10-07,removed,2026-10-08
+beta:107,beta,107,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/107,true,true,2026-10-01,2026-10-25,removed,2026-10-26
+beta:108,beta,108,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/108,false,true,2026-10-01,2026-10-05,removed,2026-10-06
+beta:109,beta,109,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/109,true,true,2026-10-01,2026-10-06,removed,2026-10-07
+beta:110,beta,110,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/110,false,true,2026-10-01,2026-10-20,removed,2026-10-21
+beta:111,beta,111,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/111,true,true,2026-10-01,2026-10-01,removed,2026-10-02
+beta:112,beta,112,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/112,true,true,2026-10-01,2026-10-30,open,
+beta:113,beta,113,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/113,true,true,2026-10-01,2026-10-03,removed,2026-10-04
+beta:114,beta,114,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/114,false,true,2026-10-01,2026-10-15,removed,2026-10-16
+beta:115,beta,115,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/115,true,true,2026-10-01,2026-10-30,open,
+beta:116,beta,116,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/116,false,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:117,beta,117,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/117,true,true,2026-10-01,2026-10-23,removed,2026-10-24
+beta:118,beta,118,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/118,false,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:119,beta,119,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/119,true,true,2026-10-01,2026-10-03,removed,2026-10-04
+beta:120,beta,120,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/120,true,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:121,beta,121,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/121,true,true,2026-10-01,2026-10-30,open,
+beta:122,beta,122,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/122,false,true,2026-10-01,2026-10-30,open,
+beta:124,beta,124,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/124,false,true,2026-10-01,2026-10-05,removed,2026-10-06
+beta:125,beta,125,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/125,true,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:126,beta,126,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/126,false,true,2026-10-01,2026-10-03,removed,2026-10-04
+beta:127,beta,127,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/127,true,true,2026-10-01,2026-10-30,open,
+beta:128,beta,128,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/128,true,true,2026-10-01,2026-10-24,removed,2026-10-25
+beta:129,beta,129,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/129,true,true,2026-10-01,2026-10-08,removed,2026-10-09
+beta:130,beta,130,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/130,false,true,2026-10-01,2026-10-11,removed,2026-10-12
+beta:131,beta,131,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/131,true,true,2026-10-01,2026-10-02,removed,2026-10-03
+beta:132,beta,132,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/132,false,true,2026-10-01,2026-10-20,removed,2026-10-21
+beta:133,beta,133,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/133,true,true,2026-10-01,2026-10-03,removed,2026-10-04
+beta:134,beta,134,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/134,false,true,2026-10-01,2026-10-06,removed,2026-10-07
+beta:135,beta,135,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/135,true,false,2026-10-02,2026-10-30,open,
+beta:136,beta,136,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/136,true,false,2026-10-02,2026-10-30,open,
+beta:137,beta,137,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/137,true,false,2026-10-02,2026-10-20,removed,2026-10-21
+beta:138,beta,138,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/138,false,false,2026-10-04,2026-10-04,removed,2026-10-05
+beta:139,beta,139,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/139,true,false,2026-10-04,2026-10-30,open,
+beta:140,beta,140,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/140,false,false,2026-10-04,2026-10-17,removed,2026-10-18
+beta:141,beta,141,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/141,true,false,2026-10-04,2026-10-28,removed,2026-10-29
+beta:142,beta,142,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/142,false,false,2026-10-04,2026-10-10,removed,2026-10-11
+beta:143,beta,143,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/143,true,false,2026-10-05,2026-10-21,removed,2026-10-22
+beta:144,beta,144,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/144,true,false,2026-10-05,2026-10-10,removed,2026-10-11
+beta:145,beta,145,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/145,true,false,2026-10-05,2026-10-17,removed,2026-10-18
+beta:146,beta,146,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/146,false,false,2026-10-05,2026-10-08,removed,2026-10-09
+beta:147,beta,147,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/147,true,false,2026-10-06,2026-10-11,removed,2026-10-12
+beta:148,beta,148,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/148,false,false,2026-10-06,2026-10-16,removed,2026-10-17
+beta:149,beta,149,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/149,true,false,2026-10-06,2026-10-27,removed,2026-10-28
+beta:150,beta,150,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/150,false,false,2026-10-06,2026-10-29,removed,2026-10-30
+beta:151,beta,151,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/151,true,false,2026-10-07,2026-10-18,removed,2026-10-19
+beta:152,beta,152,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/152,true,false,2026-10-07,2026-10-19,removed,2026-10-20
+beta:153,beta,153,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/153,true,false,2026-10-07,2026-10-11,removed,2026-10-12
+beta:154,beta,154,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/154,false,false,2026-10-07,2026-10-09,removed,2026-10-10
+beta:155,beta,155,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/155,true,false,2026-10-07,2026-10-30,open,
+beta:156,beta,156,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/156,false,false,2026-10-07,2026-10-18,removed,2026-10-19
+beta:157,beta,157,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/157,true,false,2026-10-08,2026-10-21,removed,2026-10-22
+beta:158,beta,158,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/158,false,false,2026-10-08,2026-10-08,removed,2026-10-09
+beta:159,beta,159,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/159,true,false,2026-10-08,2026-10-30,open,
+beta:160,beta,160,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/160,true,false,2026-10-08,2026-10-12,removed,2026-10-15
+beta:161,beta,161,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/161,true,false,2026-10-09,2026-10-11,removed,2026-10-12
+beta:162,beta,162,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/162,false,false,2026-10-09,2026-10-16,removed,2026-10-17
+beta:163,beta,163,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/163,true,false,2026-10-09,2026-10-17,removed,2026-10-18
+beta:164,beta,164,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/164,false,false,2026-10-09,2026-10-09,removed,2026-10-10
+beta:165,beta,165,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/165,true,false,2026-10-09,2026-10-11,removed,2026-10-12
+beta:166,beta,166,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/166,false,false,2026-10-10,2026-10-29,removed,2026-10-30
+beta:167,beta,167,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/167,true,false,2026-10-10,2026-10-30,open,
+beta:168,beta,168,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/168,true,false,2026-10-11,2026-10-30,open,
+beta:169,beta,169,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/169,true,false,2026-10-11,2026-10-30,open,
+beta:170,beta,170,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/170,false,false,2026-10-12,2026-10-24,removed,2026-10-25
+beta:171,beta,171,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/171,true,false,2026-10-12,2026-10-29,removed,2026-10-30
+beta:172,beta,172,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/172,false,false,2026-10-12,2026-10-15,removed,2026-10-16
+beta:173,beta,173,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/173,true,false,2026-10-16,2026-10-30,open,
+beta:174,beta,174,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/174,false,false,2026-10-16,2026-10-20,removed,2026-10-21
+beta:175,beta,175,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/175,true,false,2026-10-16,2026-10-30,open,
+beta:176,beta,176,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/176,true,false,2026-10-16,2026-10-27,removed,2026-10-28
+beta:177,beta,177,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/177,true,false,2026-10-16,2026-10-22,removed,2026-10-23
+beta:178,beta,178,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/178,false,false,2026-10-17,2026-10-27,removed,2026-10-28
+beta:179,beta,179,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/179,true,false,2026-10-18,2026-10-30,open,
+beta:180,beta,180,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/180,false,false,2026-10-20,2026-10-30,open,
+beta:181,beta,181,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/181,true,false,2026-10-21,2026-10-30,open,
+beta:182,beta,182,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/182,false,false,2026-10-21,2026-10-30,open,
+beta:183,beta,183,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/183,true,false,2026-10-21,2026-10-23,removed,2026-10-24
+beta:184,beta,184,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/184,true,false,2026-10-21,2026-10-30,open,
+beta:185,beta,185,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/185,true,false,2026-10-21,2026-10-30,open,
+beta:186,beta,186,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/186,false,false,2026-10-21,2026-10-30,open,
+beta:187,beta,187,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/187,true,false,2026-10-22,2026-10-28,removed,2026-10-29
+beta:188,beta,188,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/188,false,false,2026-10-22,2026-10-30,open,
+beta:189,beta,189,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/189,true,false,2026-10-22,2026-10-30,open,
+beta:190,beta,190,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/190,false,false,2026-10-22,2026-10-23,removed,2026-10-24
+beta:191,beta,191,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/191,true,false,2026-10-22,2026-10-25,removed,2026-10-26
+beta:192,beta,192,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/192,true,false,2026-10-22,2026-10-24,removed,2026-10-25
+beta:193,beta,193,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/193,true,false,2026-10-23,2026-10-30,open,
+beta:194,beta,194,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/194,false,false,2026-10-23,2026-10-30,open,
+beta:195,beta,195,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/195,true,false,2026-10-23,2026-10-30,open,
+beta:196,beta,196,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/196,false,false,2026-10-23,2026-10-24,removed,2026-10-25
+beta:197,beta,197,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/197,true,false,2026-10-23,2026-10-28,removed,2026-10-29
+beta:198,beta,198,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/198,false,false,2026-10-25,2026-10-27,removed,2026-10-28
+beta:199,beta,199,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/199,true,false,2026-10-25,2026-10-30,open,
+beta:200,beta,200,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/200,true,false,2026-10-25,2026-10-26,removed,2026-10-27
+beta:201,beta,201,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/201,true,false,2026-10-25,2026-10-30,open,
+beta:202,beta,202,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/202,false,false,2026-10-25,2026-10-30,open,
+beta:203,beta,203,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/203,true,false,2026-10-25,2026-10-30,open,
+beta:204,beta,204,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/204,false,false,2026-10-26,2026-10-30,open,
+beta:205,beta,205,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/205,true,false,2026-10-26,2026-10-30,open,
+beta:206,beta,206,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/206,false,false,2026-10-26,2026-10-30,open,
+beta:207,beta,207,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/207,true,false,2026-10-26,2026-10-30,open,
+beta:208,beta,208,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/208,true,false,2026-10-26,2026-10-30,open,
+beta:209,beta,209,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/209,true,false,2026-10-27,2026-10-30,open,
+beta:210,beta,210,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/210,false,false,2026-10-27,2026-10-30,open,
+beta:211,beta,211,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/211,true,false,2026-10-27,2026-10-30,open,
+beta:212,beta,212,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/212,false,false,2026-10-27,2026-10-30,open,
+beta:213,beta,213,Beta,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/213,true,false,2026-10-27,2026-10-29,removed,2026-10-30
+beta:214,beta,214,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/214,false,false,2026-10-28,2026-10-30,open,
+beta:215,beta,215,Beta,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/beta/215,true,false,2026-10-28,2026-10-30,open,
+beta:216,beta,216,Beta,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/216,true,false,2026-10-28,2026-10-30,open,
+beta:217,beta,217,Beta,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/217,true,false,2026-10-29,2026-10-30,open,
+beta:218,beta,218,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/218,false,false,2026-10-29,2026-10-29,removed,2026-10-30
+beta:219,beta,219,Beta,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/219,true,false,2026-10-29,2026-10-30,open,
+beta:220,beta,220,Beta,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/220,false,false,2026-10-29,2026-10-30,open,
+beta:26,beta,26,Beta,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/26,false,false,2026-10-04,2026-10-06,removed,2026-10-07
+beta:30,beta,30,Beta,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/beta/30,false,false,2026-10-23,2026-10-30,open,
+gamma:104,gamma,104,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/104,true,false,2026-10-19,2026-10-30,open,
+gamma:116,gamma,116,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/116,false,false,2026-10-11,2026-10-25,removed,2026-10-26
+gamma:13,gamma,13,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/13,true,false,2026-10-17,2026-10-30,open,
+gamma:140,gamma,140,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/140,false,false,2026-10-18,2026-10-19,removed,2026-10-20
+gamma:158,gamma,158,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/158,false,false,2026-10-13,2026-10-14,removed,2026-10-15
+gamma:200,gamma,200,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/200,true,true,2026-10-10,2026-10-25,removed,2026-10-26
+gamma:201,gamma,201,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/201,true,true,2026-10-10,2026-10-30,open,
+gamma:202,gamma,202,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/202,false,true,2026-10-10,2026-10-30,open,
+gamma:203,gamma,203,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/203,true,true,2026-10-10,2026-10-12,removed,2026-10-13
+gamma:204,gamma,204,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/204,false,true,2026-10-10,2026-10-28,removed,2026-10-29
+gamma:205,gamma,205,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/205,true,true,2026-10-10,2026-10-20,removed,2026-10-21
+gamma:206,gamma,206,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/206,false,true,2026-10-10,2026-10-10,removed,2026-10-11
+gamma:207,gamma,207,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/207,true,true,2026-10-10,2026-10-19,removed,2026-10-20
+gamma:208,gamma,208,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/208,true,true,2026-10-10,2026-10-19,removed,2026-10-20
+gamma:209,gamma,209,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/209,true,true,2026-10-10,2026-10-13,removed,2026-10-14
+gamma:210,gamma,210,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/210,false,true,2026-10-10,2026-10-30,open,
+gamma:211,gamma,211,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/211,true,true,2026-10-10,2026-10-10,removed,2026-10-11
+gamma:212,gamma,212,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/212,false,true,2026-10-10,2026-10-21,removed,2026-10-22
+gamma:213,gamma,213,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/213,true,true,2026-10-10,2026-10-30,open,
+gamma:214,gamma,214,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/214,false,true,2026-10-10,2026-10-14,removed,2026-10-15
+gamma:215,gamma,215,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/215,true,true,2026-10-10,2026-10-14,removed,2026-10-15
+gamma:216,gamma,216,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/216,true,true,2026-10-10,2026-10-25,removed,2026-10-26
+gamma:217,gamma,217,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/217,true,true,2026-10-10,2026-10-17,removed,2026-10-18
+gamma:218,gamma,218,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/218,false,true,2026-10-10,2026-10-11,removed,2026-10-12
+gamma:219,gamma,219,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/219,true,true,2026-10-10,2026-10-17,removed,2026-10-18
+gamma:220,gamma,220,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/220,false,true,2026-10-10,2026-10-20,removed,2026-10-21
+gamma:221,gamma,221,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/221,true,false,2026-10-11,2026-10-18,removed,2026-10-19
+gamma:222,gamma,222,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/222,false,false,2026-10-11,2026-10-16,removed,2026-10-17
+gamma:223,gamma,223,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/223,true,false,2026-10-11,2026-10-23,removed,2026-10-24
+gamma:224,gamma,224,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/224,true,false,2026-10-11,2026-10-12,removed,2026-10-13
+gamma:225,gamma,225,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/225,true,false,2026-10-12,2026-10-30,open,
+gamma:226,gamma,226,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/226,false,false,2026-10-12,2026-10-14,removed,2026-10-15
+gamma:227,gamma,227,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/227,true,false,2026-10-12,2026-10-20,removed,2026-10-21
+gamma:228,gamma,228,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/228,false,false,2026-10-12,2026-10-30,open,
+gamma:229,gamma,229,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/229,true,false,2026-10-12,2026-10-21,removed,2026-10-22
+gamma:230,gamma,230,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/230,false,false,2026-10-13,2026-10-16,removed,2026-10-17
+gamma:231,gamma,231,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/231,true,false,2026-10-13,2026-10-13,removed,2026-10-14
+gamma:232,gamma,232,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/232,true,false,2026-10-14,2026-10-24,removed,2026-10-25
+gamma:233,gamma,233,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/233,true,false,2026-10-14,2026-10-18,removed,2026-10-19
+gamma:234,gamma,234,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/234,false,false,2026-10-14,2026-10-14,removed,2026-10-15
+gamma:235,gamma,235,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/235,true,false,2026-10-14,2026-10-28,removed,2026-10-29
+gamma:236,gamma,236,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/236,false,false,2026-10-14,2026-10-18,removed,2026-10-19
+gamma:237,gamma,237,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/237,true,false,2026-10-15,2026-10-17,removed,2026-10-18
+gamma:238,gamma,238,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/238,false,false,2026-10-15,2026-10-26,removed,2026-10-27
+gamma:239,gamma,239,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/239,true,false,2026-10-15,2026-10-18,removed,2026-10-19
+gamma:240,gamma,240,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/240,true,false,2026-10-16,2026-10-23,removed,2026-10-24
+gamma:241,gamma,241,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/241,true,false,2026-10-16,2026-10-20,removed,2026-10-21
+gamma:242,gamma,242,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/242,false,false,2026-10-17,2026-10-26,removed,2026-10-27
+gamma:243,gamma,243,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/243,true,false,2026-10-17,2026-10-18,removed,2026-10-19
+gamma:244,gamma,244,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/244,false,false,2026-10-18,2026-10-30,open,
+gamma:245,gamma,245,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/245,true,false,2026-10-19,2026-10-23,removed,2026-10-24
+gamma:246,gamma,246,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/246,false,false,2026-10-19,2026-10-30,open,
+gamma:247,gamma,247,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/247,true,false,2026-10-19,2026-10-30,open,
+gamma:248,gamma,248,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/248,true,false,2026-10-20,2026-10-30,open,
+gamma:249,gamma,249,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/249,true,false,2026-10-20,2026-10-30,open,
+gamma:250,gamma,250,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/250,false,false,2026-10-21,2026-10-25,removed,2026-10-26
+gamma:251,gamma,251,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/251,true,false,2026-10-22,2026-10-26,removed,2026-10-27
+gamma:252,gamma,252,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/252,false,false,2026-10-22,2026-10-30,open,
+gamma:253,gamma,253,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/253,true,false,2026-10-22,2026-10-27,removed,2026-10-28
+gamma:254,gamma,254,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/254,false,false,2026-10-22,2026-10-30,open,
+gamma:255,gamma,255,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/255,true,false,2026-10-22,2026-10-24,removed,2026-10-25
+gamma:256,gamma,256,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/256,true,false,2026-10-22,2026-10-30,open,
+gamma:257,gamma,257,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/257,true,false,2026-10-23,2026-10-24,removed,2026-10-25
+gamma:258,gamma,258,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/258,false,false,2026-10-23,2026-10-26,removed,2026-10-27
+gamma:259,gamma,259,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/259,true,false,2026-10-23,2026-10-25,removed,2026-10-26
+gamma:26,gamma,26,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/26,false,false,2026-10-25,2026-10-30,open,
+gamma:260,gamma,260,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/260,false,false,2026-10-23,2026-10-24,removed,2026-10-25
+gamma:261,gamma,261,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/261,true,false,2026-10-23,2026-10-25,removed,2026-10-26
+gamma:262,gamma,262,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/262,false,false,2026-10-23,2026-10-30,open,
+gamma:263,gamma,263,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/263,true,false,2026-10-24,2026-10-24,removed,2026-10-25
+gamma:264,gamma,264,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/264,true,false,2026-10-24,2026-10-30,open,
+gamma:265,gamma,265,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/265,true,false,2026-10-25,2026-10-30,open,
+gamma:266,gamma,266,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/266,false,false,2026-10-25,2026-10-29,removed,2026-10-30
+gamma:267,gamma,267,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/267,true,false,2026-10-26,2026-10-27,removed,2026-10-28
+gamma:268,gamma,268,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/268,false,false,2026-10-26,2026-10-26,removed,2026-10-27
+gamma:269,gamma,269,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/269,true,false,2026-10-26,2026-10-30,open,
+gamma:270,gamma,270,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/270,false,false,2026-10-26,2026-10-30,open,
+gamma:271,gamma,271,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/271,true,false,2026-10-27,2026-10-30,open,
+gamma:272,gamma,272,Gamma,Financial Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/272,true,false,2026-10-27,2026-10-30,open,
+gamma:273,gamma,273,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/273,true,false,2026-10-27,2026-10-30,open,
+gamma:274,gamma,274,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/274,false,false,2026-10-27,2026-10-30,open,
+gamma:275,gamma,275,Gamma,Credit Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/275,true,false,2026-10-29,2026-10-30,open,
+gamma:276,gamma,276,Gamma,Truck Driver,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/276,false,false,2026-10-29,2026-10-29,removed,2026-10-30
+gamma:277,gamma,277,Gamma,Supply Chain Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/277,true,false,2026-10-30,2026-10-30,open,
+gamma:278,gamma,278,Gamma,Nurse,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/278,false,false,2026-10-30,2026-10-30,open,
+gamma:279,gamma,279,Gamma,"BI Developer, ""Reporting""","Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/279,true,false,2026-10-30,2026-10-30,open,
+gamma:73,gamma,73,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/73,true,false,2026-10-12,2026-10-19,removed,2026-10-20
+gamma:9,gamma,9,Gamma,Data Analyst,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/9,true,false,2026-10-26,2026-10-30,open,
+gamma:90,gamma,90,Gamma,Store Associate,"Dallas, TX",,2025-11-10,https://jobs.example.com/gamma/90,false,false,2026-10-15,2026-10-20,removed,2026-10-21
