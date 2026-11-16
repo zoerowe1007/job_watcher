@@ -1,0 +1,354 @@
+{
+ "run_time": "2026-11-16T15:58:40Z",
+ "results": [
+  {
+   "name": "schwab",
+   "employer": "Charles Schwab",
+   "found": []
+  },
+  {
+   "name": "fidelity",
+   "employer": "Fidelity Investments",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "fmr.wd1.myworkdayjobs.com",
+     "tenant": "fmr",
+     "site": "FidelityCareers",
+     "total": 886,
+     "total_with_search_analyst": 138,
+     "sample": [
+      "Relationship Manager  - Chandler, AZ",
+      "Senior Front End Developer (Angular, TypeScript/ Node.JS, REST APIs)",
+      "Financial Planning Consultant - Westlake, TX"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "jpmorgan",
+   "employer": "JPMorgan Chase",
+   "found": [
+    {
+     "ats": "oracle",
+     "host": "jpmc.fa.oraclecloud.com",
+     "site": "CX_1001",
+     "total": 6937,
+     "sample": []
+    }
+   ]
+  },
+  {
+   "name": "capitalone",
+   "employer": "Capital One",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "capitalone.wd12.myworkdayjobs.com",
+     "tenant": "capitalone",
+     "site": "Capital_One",
+     "total": 2063,
+     "total_with_search_analyst": 355,
+     "sample": [
+      "Staff Full Stack Engineer (Director Level)",
+      "Sr. Business Analyst, Incentive Compensation Risk Management",
+      "Manager, Financial Planning & Analysis - Card Customer Service & Strategy"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "toyota",
+   "employer": "Toyota (North America and Financial Services)",
+   "found": []
+  },
+  {
+   "name": "att",
+   "employer": "AT&T",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "att.wd1.myworkdayjobs.com",
+     "tenant": "att",
+     "site": "ATTGeneral",
+     "total": 1093,
+     "total_with_search_analyst": 186,
+     "sample": [
+      "Inbound Call Center Tech Support Representative",
+      "Field Sales Representative",
+      "Bilingual Spanish Field Sales Representative"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "americanairlines",
+   "employer": "American Airlines",
+   "found": []
+  },
+  {
+   "name": "mckesson",
+   "employer": "McKesson",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "mckesson.wd3.myworkdayjobs.com",
+     "tenant": "mckesson",
+     "site": "External_Careers",
+     "total": 649,
+     "total_with_search_analyst": 210,
+     "sample": [
+      "Coordinateur des bases de données - Database Coordinator (contrat 3 mois)",
+      "Counsel, CoverMyMeds",
+      "Data Specialist"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "walmart",
+   "employer": "Walmart (incl. Sam's Club)",
+   "found": []
+  },
+  {
+   "name": "tyson",
+   "employer": "Tyson Foods",
+   "found": []
+  },
+  {
+   "name": "jbhunt",
+   "employer": "J.B. Hunt",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "jbhunt.wd501.myworkdayjobs.com",
+     "tenant": "jbhunt",
+     "site": "Careers",
+     "total": 438,
+     "total_with_search_analyst": 0,
+     "sample": [
+      "Trailer Technician",
+      "Trailer Technician",
+      "Trailer Mechanic"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "arvest",
+   "employer": "Arvest Bank",
+   "found": []
+  },
+  {
+   "name": "simmons",
+   "employer": "Simmons Foods",
+   "found": []
+  },
+  {
+   "name": "georges",
+   "employer": "George's Inc.",
+   "found": []
+  },
+  {
+   "name": "pg",
+   "employer": "Procter & Gamble",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "pg.wd5.myworkdayjobs.com",
+     "tenant": "pg",
+     "site": "1000",
+     "total": 880,
+     "total_with_search_analyst": 389,
+     "sample": [
+      "AI & Data Analytics Internship",
+      "Graphic Specialist",
+      "Spring Design Co-op — Beauty House"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "lockheedmartin",
+   "employer": "Lockheed Martin",
+   "found": []
+  },
+  {
+   "name": "pepsico",
+   "employer": "PepsiCo (Frito-Lay)",
+   "found": []
+  },
+  {
+   "name": "kimberlyclark",
+   "employer": "Kimberly-Clark",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "kimberlyclark.wd1.myworkdayjobs.com",
+     "tenant": "kimberlyclark",
+     "site": "GLOBAL",
+     "total": 136,
+     "total_with_search_analyst": 15,
+     "sample": [
+      "Continuous Improvement (CI) and Capabilities Manager",
+      "Sr Asset Leader - Personal Care",
+      "Customer Logistics Analyst"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "wellsfargo",
+   "employer": "Wells Fargo",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "wf.wd1.myworkdayjobs.com",
+     "tenant": "wf",
+     "site": "WellsFargoJobs",
+     "total": 1260,
+     "total_with_search_analyst": 127,
+     "sample": [
+      "Personal Banker Long Beach District",
+      "Branch Operations Coordinator Moorhead Holiday",
+      "Mortgage Retail Sales Consultant (SAFE)"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "texasinstruments",
+   "employer": "Texas Instruments",
+   "found": []
+  },
+  {
+   "name": "southwest",
+   "employer": "Southwest Airlines",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "swa.wd1.myworkdayjobs.com",
+     "tenant": "swa",
+     "site": "External",
+     "total": 29,
+     "total_with_search_analyst": 11,
+     "sample": [
+      "Senior Operations Research Developer",
+      "Supervisor Aircraft Maintenance - LAX",
+      "Aircraft Maintenance Technician - PHX"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "kdp",
+   "employer": "Keurig Dr Pepper",
+   "found": []
+  },
+  {
+   "name": "fluor",
+   "employer": "Fluor",
+   "found": []
+  },
+  {
+   "name": "tenet",
+   "employer": "Tenet Healthcare",
+   "found": []
+  },
+  {
+   "name": "comerica",
+   "employer": "Comerica",
+   "found": []
+  },
+  {
+   "name": "santander",
+   "employer": "Santander Consumer / SBNA",
+   "found": []
+  },
+  {
+   "name": "jacobs",
+   "employer": "Jacobs",
+   "found": []
+  },
+  {
+   "name": "cbre",
+   "employer": "CBRE",
+   "found": []
+  },
+  {
+   "name": "albertsons",
+   "employer": "Albertsons Companies",
+   "found": []
+  },
+  {
+   "name": "atmos",
+   "employer": "Atmos Energy",
+   "found": []
+  },
+  {
+   "name": "alcon",
+   "employer": "Alcon",
+   "found": []
+  },
+  {
+   "name": "bnsf",
+   "employer": "BNSF Railway",
+   "found": []
+  },
+  {
+   "name": "rtx",
+   "employer": "RTX (Raytheon)",
+   "found": []
+  },
+  {
+   "name": "vistra",
+   "employer": "Vistra",
+   "found": []
+  },
+  {
+   "name": "murphyusa",
+   "employer": "Murphy USA",
+   "found": []
+  },
+  {
+   "name": "builders",
+   "employer": "Builders FirstSource",
+   "found": []
+  },
+  {
+   "name": "dallasfed",
+   "employer": "Federal Reserve Bank of Dallas",
+   "found": []
+  },
+  {
+   "name": "texashealth",
+   "employer": "Texas Health Resources",
+   "found": []
+  },
+  {
+   "name": "bswhealth",
+   "employer": "Baylor Scott & White Health",
+   "found": []
+  },
+  {
+   "name": "goldmansachs",
+   "employer": "Goldman Sachs",
+   "found": []
+  },
+  {
+   "name": "ericsson",
+   "employer": "Ericsson",
+   "found": []
+  },
+  {
+   "name": "ey",
+   "employer": "EY",
+   "found": []
+  },
+  {
+   "name": "deloitte",
+   "employer": "Deloitte",
+   "found": []
+  }
+ ]
+}
