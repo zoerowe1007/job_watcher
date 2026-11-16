@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market · Job Watcher</title>
+<meta name="description" content="What the history says: new and removed postings, days open, employers and locations.">
+<meta name="theme-color" content="#12304f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Job Watcher</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="link" href="index.html">Today</a></li>
+        <li><a class="link" href="browse.html">Browse</a></li>
+        <li><a class="link" href="market.html" aria-current="page">Market</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="banner" class="banner" role="status" hidden></div>
+<main id="content">
+
+<h1>Market</h1>
+<p class="sub" id="asof">Loading the history…</p>
+<div id="sections"></div>
+
+</main>
+<footer>Updated every day by GitHub Actions from public employer job boards.
+<a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
+<script src="assets/common.js"></script>
+<script src="assets/market-calc.js"></script>
+<script src="assets/charts.js"></script>
+<script>
+(function () {
+  var C = JWCharts;
+  function sec(n, heading, text, legend, chart, table) {
+    return '<section class="section card" aria-labelledby="h' + n + '"><h2 id="h' + n + '">' + heading + '</h2><p>' + text + '</p>' +
+      (legend || '') + chart + table + '</section>';
+  }
+  function sum(a) { return a.reduce(function (x, y) { return x + y; }, 0); }
+  function legend(items) {
+    return '<div class="legend">' + items.map(function (i) { return '<span><i style="background:var(' + i[1] + ')"></i>' + i[0] + '</span>'; }).join('') + '</div>';
+  }
+  function pct(x) { return Math.round(x * 100) + '%'; }
+  function dayWord(n) { return n === 1 ? 'day' : 'days'; }
+
+  JW.loadData().then(function (d) {
+    var m = JWMarket.compute(d.history), out = [];
+    if (!m.lastRun) { document.getElementById('sections').innerHTML = '<div class="card">The history is empty so far. Run the pipeline first.</div>'; return; }
+    document.getElementById('asof').textContent = 'History from ' + m.firstDate + ' to ' + m.lastRun + ' (' + JW.plural(m.days.length, 'day') +
+      ', ' + JW.fmt(d.history.length) + ' postings). Every number is computed in your browser from data/history.csv.';
+
+    /* 1 new per day */
+    var nA = sum(m.newAll), nR = sum(m.newRole), busiest = m.newAll.indexOf(Math.max.apply(null, m.newAll));
+    out.push(sec(1,
+      nA ? JW.fmt(nA) + ' new postings have appeared since tracking began, ' + JW.fmt(nR) + ' of them in my role'
+         : 'No new postings yet: the first run is only the starting point',
+      'A posting is new on the day the tool first sees it. Postings that were already open when a source was first read are left out, because their real start date is unknown. ' +
+      (nA ? 'The busiest day was ' + m.days[busiest] + ' with ' + JW.fmt(m.newAll[busiest]) + ' new postings.' : 'New postings will show up here from the second day on.'),
+      legend([['All postings', '--bar-all'], ['In my role', '--bar-role']]),
+      C.columns({ labels: m.days, short: JW.shortDate, label: 'New postings per day, all and in my role',
+        series: [{ name: 'All postings', values: m.newAll, cls: 'bar-all' }, { name: 'In my role', values: m.newRole, cls: 'bar-role' }] }),
+      C.dataTable(['Day', 'All new', 'In my role'], m.days.map(function (x, i) { return [x, m.newAll[i], m.newRole[i]]; }))));
+
+    /* 2 removed per day */
+    var rem = sum(m.removed), peak = m.removed.indexOf(Math.max.apply(null, m.removed));
+    out.push(sec(2,
+      rem ? JW.fmt(rem) + ' postings have been taken down, most on ' + m.days[peak] : 'No postings have been removed yet',
+      'A posting is removed on the day its employer\'s board stops listing it. This counts every removed posting, including ones that were open before tracking began. ' +
+      (rem ? m.days[peak] + ' saw ' + JW.fmt(m.removed[peak]) + ' removals.' : 'Removals appear once a posting has disappeared from a board.'),
+      '', C.columns({ labels: m.days, short: JW.shortDate, label: 'Removed postings per day',
+        series: [{ name: 'Removed', values: m.removed, cls: 'bar-warn' }] }),
+      C.dataTable(['Day', 'Removed'], m.days.map(function (x, i) { return [x, m.removed[i]]; }))));
+
+    /* 3 open per employer */
+    var top = m.openByEmployer[0];
+    out.push(sec(3,
+      top ? JW.esc(top[0]) + ' has the most open postings: ' + JW.fmt(top[1]) + ' of ' + JW.fmt(m.openCount) : 'No open postings',
+      'Open postings per employer as of the last run (' + m.lastRun + '). Boards read with a search term only list postings that match the term, so employer sizes are not directly comparable.',
+      '', C.bars({ rows: m.openByEmployer, label: 'Open postings per employer', cls: 'bar-neutral' }),
+      C.dataTable(['Employer', 'Open postings'], m.openByEmployer)));
+
+    /* 4 days open */
+    var hist = [], maxBin = 21, i;
+    for (i = 0; i <= maxBin; i++) hist.push(0);
+    m.daysOpen.forEach(function (v) { hist[Math.min(v, maxBin)]++; });
+    var labels = hist.map(function (_, k) { return k === maxBin ? maxBin + '+' : String(k); });
+    var med = m.medianDaysOpen;
+    out.push(sec(4,
+      med == null ? 'Too early to measure how long postings stay open'
+                  : 'Removed postings stayed open a median of ' + med + ' ' + dayWord(med),
+      'Days open is the removed date minus the first-seen date, for removed postings that were not already open on the first run. ' +
+      (med == null ? 'There are no such postings yet.' : 'This covers ' + JW.fmt(m.daysOpen.length) + ' postings; the dashed line marks the median. Postings still open are not included, so early on this leans toward quick fills and short-lived postings.'),
+      '', C.columns({ labels: labels, label: 'Number of removed postings by days open', marker: med == null ? null : Math.min(Math.floor(med), maxBin),
+        markerLabel: med == null ? '' : 'median ' + med,
+        series: [{ name: 'Postings', values: hist, cls: 'bar-neutral' }] }),
+      C.dataTable(['Days open', 'Removed postings'], labels.map(function (l, k) { return [l, hist[k]]; }).concat([['Median', med == null ? 'n/a' : med]]))));
+
+    /* 5 share removed within 7 days */
+    var s7 = m.share7;
+    out.push(sec(5,
+      s7.share == null ? 'Too early to say how many postings disappear within a week'
+                       : pct(s7.share) + ' of postings were removed within seven days of first appearing',
+      'Among postings that were not open on the first run and were first seen at least seven days before the last run, this is the share whose removed date is seven days or fewer after the first-seen date. ' +
+      (s7.share == null ? 'No posting is old enough yet.' : JW.fmt(s7.num) + ' of ' + JW.fmt(s7.den) + ' qualifying postings.'),
+      '', s7.den ? C.split({ label: 'Share of postings removed within seven days',
+        a: { label: 'Removed within 7 days', value: s7.num, cls: 'bar-warn' }, b: { label: 'Not removed within 7 days', value: s7.den - s7.num, cls: 'bar-all' } }) : '',
+      C.dataTable(['Measure', 'Value'], [['Qualifying postings', s7.den], ['Removed within 7 days', s7.num], ['Share', s7.share == null ? 'n/a' : pct(s7.share)]])));
+
+    /* 6 top locations */
+    var tl = m.topLocations[0];
+    out.push(sec(6,
+      tl ? JW.esc(tl[0]) + ' is the top location, with ' + JW.fmt(tl[1]) + ' open postings' : 'No open postings to place',
+      'The ten most common locations among open postings as of the last run, exactly as each employer writes them (some boards list only "2 Locations").',
+      '', C.bars({ rows: m.topLocations, label: 'Top locations among open postings', cls: 'bar-role' }),
+      C.dataTable(['Location', 'Open postings'], m.topLocations)));
+
+    document.getElementById('sections').innerHTML = out.join('');
+  }).catch(JW.showError);
+})();
+</script>
+</body>
+</html>

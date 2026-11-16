@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse · Job Watcher</title>
+<meta name="description" content="Open postings you can filter, search, sort and shortlist.">
+<meta name="theme-color" content="#12304f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Job Watcher</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="link" href="index.html">Today</a></li>
+        <li><a class="link" href="browse.html" aria-current="page">Browse</a></li>
+        <li><a class="link" href="market.html">Market</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="banner" class="banner" role="status" hidden></div>
+<main id="content">
+
+<h1>Browse</h1>
+<p class="sub">Open postings from the latest run. Star a posting to keep it on your shortlist; the shortlist stays in this browser.</p>
+
+<div class="controls">
+  <div>
+    <label id="scope-label">Show</label>
+    <div class="switch" role="group" aria-labelledby="scope-label">
+      <button type="button" id="scope-role" aria-pressed="true">My role</button>
+      <button type="button" id="scope-all" aria-pressed="false">All postings</button>
+    </div>
+  </div>
+  <div><label for="employer">Employer</label><select id="employer"><option value="">All employers</option></select></div>
+  <div><label for="location">Location</label><select id="location"><option value="">All locations</option></select></div>
+  <div><label for="days">Days open (since first seen)</label>
+    <select id="days">
+      <option value="">Any</option><option value="max:1">1 day or less</option><option value="max:3">3 days or less</option>
+      <option value="max:7">7 days or less</option><option value="max:14">14 days or less</option>
+      <option value="min:14">More than 14 days</option><option value="min:30">More than 30 days</option>
+    </select></div>
+  <div><label for="q">Search titles</label><input id="q" type="search" placeholder="e.g. credit analyst" autocomplete="off"></div>
+  <div><label for="sort">Sort by first seen</label>
+    <select id="sort"><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+  <div><label for="only-starred">Shortlist</label>
+    <button type="button" class="btn ghost" id="only-starred" aria-pressed="false">Show shortlist only (<span id="star-count">0</span>)</button></div>
+</div>
+
+<div class="resultbar"><span id="count" aria-live="polite"></span><span id="note"></span></div>
+<div class="card"><ul class="posts" id="results"><li class="empty">Loading…</li></ul></div>
+
+</main>
+<footer>Updated every day by GitHub Actions from public employer job boards.
+<a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
+<script src="assets/common.js"></script>
+<script>
+(function () {
+  var PAGE = 100, state = { role: true, starred: false, shown: PAGE }, data, today;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function opts() {
+    var d = $('days').value, mx = null, mn = null;
+    if (d.indexOf('max:') === 0) mx = +d.slice(4);
+    if (d.indexOf('min:') === 0) mn = +d.slice(4);
+    return { role: state.role, employer: $('employer').value, location: $('location').value,
+             maxDays: mx, minDays: mn, q: $('q').value, sort: $('sort').value, today: today };
+  }
+  function fillSelect(el, values, keep) {
+    el.innerHTML = '<option value="">' + el.options[0].textContent + '</option>' +
+      values.map(function (v) { return '<option value="' + JW.esc(v[0]) + '">' + JW.esc(v[0]) + ' (' + JW.fmt(v[1]) + ')</option>'; }).join('');
+    el.value = keep && values.some(function (v) { return v[0] === keep; }) ? keep : '';
+  }
+  function tally(rows, f) {
+    var m = {};
+    rows.forEach(function (r) { var k = f(r); m[k] = (m[k] || 0) + 1; });
+    return Object.keys(m).map(function (k) { return [k, m[k]]; }).sort(function (a, b) { return b[1] - a[1] || (a[0] < b[0] ? -1 : 1); });
+  }
+  function refreshFilters() {
+    // employer and location lists follow the My role / All switch
+    var pool = data.history.filter(function (r) { return r.status === 'open' && (!state.role || r.in_role); });
+    fillSelect($('employer'), tally(pool, function (r) { return r.employer; }), $('employer').value);
+    var emp = $('employer').value;
+    fillSelect($('location'), tally(pool.filter(function (r) { return !emp || r.employer === emp; }),
+      function (r) { return r.location || '(not listed)'; }), $('location').value);
+  }
+  function draw() {
+    var o = opts(), rows;
+    if (state.starred) {
+      var ids = JW.shortlist.all();
+      rows = data.history.filter(function (r) { return ids.indexOf(r.posting_id) !== -1; });
+      rows.sort(function (a, b) { return a.first_seen < b.first_seen ? 1 : -1; });
+      $('count').textContent = JW.plural(rows.length, 'starred posting');
+      $('note').textContent = 'Postings that were removed are marked.';
+    } else {
+      rows = JW.filterRows(data.history, o);
+      $('count').textContent = JW.plural(rows.length, 'open posting') + (state.role ? ' in my role' : '');
+      $('note').textContent = 'Days open count from the day the tool first saw a posting; postings already open on day one show "+".';
+    }
+    $('star-count').textContent = JW.shortlist.all().length;
+    var html = rows.slice(0, state.shown).map(function (r) {
+      return JW.postingItem(r, { star: true, apply: true, showDays: r.status === 'open', showFirstSeen: true, today: today });
+    }).join('');
+    if (rows.length > state.shown) html += '<li><button class="btn ghost" type="button" id="more">Show more</button></li>';
+    $('results').innerHTML = html || '<li class="empty">' + (state.starred ? 'Nothing on your shortlist yet. Click a star to add a posting.' : 'No postings match these filters.') + '</li>';
+  }
+  function reset() { state.shown = PAGE; draw(); }
+
+  $('scope-role').addEventListener('click', function () { setScope(true); });
+  $('scope-all').addEventListener('click', function () { setScope(false); });
+  function setScope(role) {
+    state.role = role; state.shown = PAGE;
+    $('scope-role').setAttribute('aria-pressed', role); $('scope-all').setAttribute('aria-pressed', !role);
+    refreshFilters(); draw();
+  }
+  $('employer').addEventListener('change', function () { refreshFilters(); reset(); });
+  ['location', 'days', 'sort'].forEach(function (id) { $(id).addEventListener('change', reset); });
+  $('q').addEventListener('input', reset);
+  $('only-starred').addEventListener('click', function () {
+    state.starred = !state.starred; this.setAttribute('aria-pressed', state.starred);
+    this.classList.toggle('ghost', !state.starred); state.shown = PAGE; draw();
+  });
+  $('results').addEventListener('click', function (e) {
+    var star = e.target.closest('.star');
+    if (star) {
+      var on = JW.shortlist.toggle(star.getAttribute('data-id'));
+      star.setAttribute('aria-pressed', on); star.textContent = on ? '★' : '☆';
+      $('star-count').textContent = JW.shortlist.all().length;
+      if (state.starred && !on) draw();
+    }
+    if (e.target.id === 'more') { state.shown += PAGE; draw(); }
+  });
+
+  JW.loadData().then(function (d) {
+    data = d; today = d.status.run_time.slice(0, 10);
+    // "days open" is measured to the day of the latest run in the data
+    refreshFilters(); draw();
+  }).catch(JW.showError);
+})();
+</script>
+</body>
+</html>

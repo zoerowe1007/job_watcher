@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Job Watcher</title>
+<meta name="description" content="The latest run: source status, counts, and the postings that are new or gone.">
+<meta name="theme-color" content="#12304f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Job Watcher</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="link" href="index.html" aria-current="page">Today</a></li>
+        <li><a class="link" href="browse.html">Browse</a></li>
+        <li><a class="link" href="market.html">Market</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="banner" class="banner" role="status" hidden></div>
+<main id="content">
+
+<h1>Today</h1>
+<p class="sub" id="runline">Loading the latest run…</p>
+
+<section aria-label="Counts">
+  <div class="stats" id="stats"></div>
+</section>
+
+<h2>Sources</h2>
+<div class="card" style="overflow-x:auto"><table id="sources"><thead><tr><th>Employer</th><th>Source</th><th>Status</th><th class="num">Postings</th></tr></thead><tbody></tbody></table></div>
+
+<h2 id="new-h">New postings in the latest run</h2>
+<div class="card"><ul class="posts" id="new-list"></ul></div>
+
+<h2 id="removed-h">Removed postings in the latest run</h2>
+<div class="card"><ul class="posts" id="removed-list"></ul></div>
+
+</main>
+<footer>Updated every day by GitHub Actions from public employer job boards.
+<a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
+<script src="assets/common.js"></script>
+<script>
+(function () {
+  var LIMIT = 60;
+  function list(el, rows, emptyText, today) {
+    if (!rows.length) { el.innerHTML = '<li class="empty">' + emptyText + '</li>'; return; }
+    rows = rows.slice().sort(function (a, b) {
+      return (b.in_role - a.in_role) || (a.employer < b.employer ? -1 : a.employer > b.employer ? 1 : 0) ||
+             (a.title < b.title ? -1 : 1);
+    });
+    function draw(n) {
+      el.innerHTML = rows.slice(0, n).map(function (r) { return JW.postingItem(r, { today: today }); }).join('') +
+        (rows.length > n ? '<li><button class="btn ghost" type="button">Show all ' + JW.fmt(rows.length) + '</button></li>' : '');
+      var b = el.querySelector('button');
+      if (b) b.addEventListener('click', function () { draw(rows.length); });
+    }
+    draw(LIMIT);
+  }
+  JW.loadData().then(function (d) {
+    var s = d.status, today = s.run_time.slice(0, 10);
+    document.getElementById('runline').textContent = 'Last run: ' + JW.runLabel(s.run_time) +
+      ' (' + new Date(s.run_time).toLocaleString() + ' your time)';
+    var cards = [
+      ['days_with_success', 'Days with a successful run', ''], ['open', 'Open postings', ''],
+      ['new_today', 'New today', 'new'], ['removed_today', 'Removed today', 'removed']];
+    document.getElementById('stats').innerHTML = cards.map(function (c) {
+      return '<div class="card stat ' + c[2] + '"><div class="num">' + JW.fmt(s[c[0]]) + '</div><div class="label">' + c[1] + '</div></div>';
+    }).join('');
+    var employer = {};
+    d.history.forEach(function (r) { employer[r.source] = r.employer; });
+    document.querySelector('#sources tbody').innerHTML = s.sources.map(function (x) {
+      return '<tr><td>' + JW.esc(employer[x.name] || '') + '</td><td>' + JW.esc(x.name) + '</td><td>' +
+        (x.ok ? '<span class="pill ok">ok</span>' : '<span class="pill bad">failed</span>' +
+          (x.error ? '<div class="err">' + JW.esc(x.error) + '</div>' : '')) +
+        '</td><td class="num">' + JW.fmt(x.count) + '</td></tr>';
+    }).join('');
+    var added = d.history.filter(function (r) { return r.first_seen === today && !r.first_run; });
+    var gone = d.history.filter(function (r) { return r.removed_date === today; });
+    document.getElementById('new-h').textContent = 'New postings in the latest run (' + JW.fmt(added.length) + ')';
+    document.getElementById('removed-h').textContent = 'Removed postings in the latest run (' + JW.fmt(gone.length) + ')';
+    var first = s.first_run_date === today;
+    list(document.getElementById('new-list'), added,
+      first ? 'This is the first run, so every posting that was already open is the starting point. Nothing counts as new until tomorrow.'
+            : 'No new postings in this run.', today);
+    list(document.getElementById('removed-list'), gone, 'No postings were removed in this run.', today);
+  }).catch(JW.showError);
+})();
+</script>
+</body>
+</html>
