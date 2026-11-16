@@ -1,10 +1,16 @@
 {
- "run_time": "2026-11-16T15:58:40Z",
+ "run_time": "2026-11-16T16:07:26Z",
  "results": [
   {
    "name": "schwab",
    "employer": "Charles Schwab",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://www.aboutschwab.com/careers -> HTTP Error 403: Forbidden",
+    "https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/External/jobs -> HTTP 422 from https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/External/jobs",
+    "https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/Schwab/jobs -> HTTP 422 from https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/Schwab/jobs",
+    "https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/SchwabExternal/jobs -> HTTP 422 from https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/SchwabExternal/jobs"
+   ]
   },
   {
    "name": "fidelity",
@@ -60,7 +66,21 @@
   {
    "name": "toyota",
    "employer": "Toyota (North America and Financial Services)",
-   "found": []
+   "found": [
+    {
+     "ats": "workday",
+     "host": "toyota.wd503.myworkdayjobs.com",
+     "tenant": "toyota",
+     "site": "TMNA",
+     "total": 106,
+     "total_with_search_analyst": 66,
+     "sample": [
+      "Data Analyst",
+      "Engineer - Production Engineering",
+      "Engineer II - Production Engineering (Assembly)"
+     ]
+    }
+   ]
   },
   {
    "name": "att",
@@ -84,7 +104,13 @@
   {
    "name": "americanairlines",
    "employer": "American Airlines",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/AA/jobs -> HTTP 422 from https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/AA/jobs",
+    "https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/External/jobs -> HTTP 422 from https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/External/jobs",
+    "https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/AmericanAirlines/jobs -> HTTP 422 from https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/AmericanAirlines/jobs",
+    "https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/Careers/jobs -> HTTP 422 from https://aa.wd1.myworkdayjobs.com/wday/cxs/aa/Careers/jobs"
+   ]
   },
   {
    "name": "mckesson",
@@ -108,12 +134,32 @@
   {
    "name": "walmart",
    "employer": "Walmart (incl. Sam's Club)",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs -> HTTP 422 from https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs",
+    "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs -> HTTP 422 from https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs",
+    "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/External/jobs -> HTTP 422 from https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/External/jobs",
+    "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/Careers/jobs -> HTTP 422 from https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/Careers/jobs"
+   ]
   },
   {
    "name": "tyson",
    "employer": "Tyson Foods",
-   "found": []
+   "found": [
+    {
+     "ats": "workday",
+     "host": "tysonfoods.wd5.myworkdayjobs.com",
+     "tenant": "tysonfoods",
+     "site": "TSN",
+     "total": 699,
+     "total_with_search_analyst": 16,
+     "sample": [
+      "General Production Labor- 2nd & 3rd Shifts- Sanford, NC",
+      "Safety Manager- Clarksville, AR- 2nd shift",
+      "November General Production 2nd Shift -Center Tx (FT)"
+     ]
+    }
+   ]
   },
   {
    "name": "jbhunt",
@@ -137,17 +183,43 @@
   {
    "name": "arvest",
    "employer": "Arvest Bank",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://careers.arvest.com/ -> <urlopen error [Errno -2] Name or service not known>",
+    "https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/Arvest/jobs -> HTTP 422 from https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/Arvest/jobs",
+    "https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/External/jobs -> HTTP 422 from https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/External/jobs",
+    "https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/ArvestCareers/jobs -> HTTP 422 from https://arvest.wd1.myworkdayjobs.com/wday/cxs/arvest/ArvestCareers/jobs"
+   ]
   },
   {
    "name": "simmons",
    "employer": "Simmons Foods",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://jobs.simmonsfoods.com/ -> <urlopen error [Errno 101] Network is unreachable>",
+    "https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/External/jobs -> HTTP 422 from https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/External/jo",
+    "https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/SimmonsFoods/jobs -> HTTP 422 from https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/SimmonsFood",
+    "https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/Simmons/jobs -> HTTP 422 from https://simmonsfoods.wd1.myworkdayjobs.com/wday/cxs/simmonsfoods/Simmons/job"
+   ]
   },
   {
    "name": "georges",
    "employer": "George's Inc.",
-   "found": []
+   "found": [
+    {
+     "ats": "workday",
+     "host": "georgesinc.wd5.myworkdayjobs.com",
+     "tenant": "georgesinc",
+     "site": "JoinGeorges",
+     "total": 119,
+     "total_with_search_analyst": 1,
+     "sample": [
+      "QA TECHNICIAN II - grade 4",
+      "Manager, Area",
+      "QA TECHNICIAN II - grade 4"
+     ]
+    }
+   ]
   },
   {
    "name": "pg",
@@ -171,12 +243,24 @@
   {
    "name": "lockheedmartin",
    "employer": "Lockheed Martin",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/LMCareers/jobs -> HTTP 422 from https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/LMCaree",
+    "https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/External/jobs -> HTTP 422 from https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/Externa",
+    "https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/Careers/jobs -> HTTP 422 from https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/Careers",
+    "https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/ExternalCareers/jobs -> HTTP 422 from https://lockheedmartin.wd1.myworkdayjobs.com/wday/cxs/lockheedmartin/Externa"
+   ]
   },
   {
    "name": "pepsico",
    "employer": "PepsiCo (Frito-Lay)",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/PepsiCoJobs/jobs -> HTTP 422 from https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/PepsiCoJobs/jobs",
+    "https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/External/jobs -> HTTP 422 from https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/External/jobs",
+    "https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/Careers/jobs -> HTTP 422 from https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/Careers/jobs",
+    "https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/ExternalCareers/jobs -> HTTP 422 from https://pepsico.wd1.myworkdayjobs.com/wday/cxs/pepsico/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "kimberlyclark",
@@ -219,7 +303,15 @@
   {
    "name": "texasinstruments",
    "employer": "Texas Instruments",
-   "found": []
+   "found": [
+    {
+     "ats": "oracle",
+     "host": "edbz.fa.us2.oraclecloud.com",
+     "site": "CX_1001",
+     "total": 918,
+     "sample": []
+    }
+   ]
   },
   {
    "name": "southwest",
@@ -243,112 +335,461 @@
   {
    "name": "kdp",
    "employer": "Keurig Dr Pepper",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/KDP/jobs -> HTTP 422 from https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/KDP/jobs",
+    "https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/External/jobs -> HTTP 422 from https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/External/jobs",
+    "https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/KDPCareers/jobs -> HTTP 422 from https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/KDPCareers/jobs",
+    "https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/Careers/jobs -> HTTP 422 from https://kdp.wd1.myworkdayjobs.com/wday/cxs/kdp/Careers/jobs"
+   ]
   },
   {
    "name": "fluor",
    "employer": "Fluor",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/External/jobs -> HTTP 422 from https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/External/jobs",
+    "https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/Fluor/jobs -> HTTP 422 from https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/Fluor/jobs",
+    "https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/FluorCareers/jobs -> HTTP 422 from https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/FluorCareers/jobs",
+    "https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/Careers/jobs -> HTTP 422 from https://fluor.wd1.myworkdayjobs.com/wday/cxs/fluor/Careers/jobs"
+   ]
   },
   {
    "name": "tenet",
    "employer": "Tenet Healthcare",
-   "found": []
+   "found": [
+    {
+     "ats": "oracle",
+     "host": "eodr.fa.us2.oraclecloud.com",
+     "site": "CX_1001",
+     "total": 2947,
+     "sample": []
+    }
+   ]
   },
   {
    "name": "comerica",
    "employer": "Comerica",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://www.comerica.com/about-comerica/careers.html -> The read operation timed out",
+    "https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/External/jobs -> HTTP 401 from https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/External/jobs",
+    "https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/Comerica/jobs -> HTTP 401 from https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/Comerica/jobs",
+    "https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/Careers/jobs -> HTTP 401 from https://comerica.wd1.myworkdayjobs.com/wday/cxs/comerica/Careers/jobs"
+   ]
   },
   {
    "name": "santander",
    "employer": "Santander Consumer / SBNA",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/External/jobs -> HTTP 422 from https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/External/jobs",
+    "https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/Santander/jobs -> HTTP 422 from https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/Santander/jobs",
+    "https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/Careers/jobs -> HTTP 422 from https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/Careers/jobs",
+    "https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/ExternalCareers/jobs -> HTTP 422 from https://santander.wd1.myworkdayjobs.com/wday/cxs/santander/ExternalCareers/j"
+   ]
   },
   {
    "name": "jacobs",
    "employer": "Jacobs",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/External/jobs -> HTTP 422 from https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/External/jobs",
+    "https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/Jacobs/jobs -> HTTP 422 from https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/Jacobs/jobs",
+    "https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/Careers/jobs -> HTTP 422 from https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/Careers/jobs",
+    "https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/ExternalCareers/jobs -> HTTP 422 from https://jacobs.wd1.myworkdayjobs.com/wday/cxs/jacobs/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "cbre",
    "employer": "CBRE",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/CBRE/jobs -> HTTP 422 from https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/CBRE/jobs",
+    "https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/External/jobs -> HTTP 422 from https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/External/jobs",
+    "https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/Careers/jobs -> HTTP 422 from https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/Careers/jobs",
+    "https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/ExternalCareers/jobs -> HTTP 422 from https://cbre.wd1.myworkdayjobs.com/wday/cxs/cbre/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "albertsons",
    "employer": "Albertsons Companies",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/External/jobs -> HTTP 422 from https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/External/jobs",
+    "https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/Albertsons/jobs -> HTTP 422 from https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/Albertsons/jobs",
+    "https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/Careers/jobs -> HTTP 422 from https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/Careers/jobs",
+    "https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/ExternalCareers/jobs -> HTTP 422 from https://albertsons.wd1.myworkdayjobs.com/wday/cxs/albertsons/ExternalCareers"
+   ]
   },
   {
    "name": "atmos",
    "employer": "Atmos Energy",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/External/jobs -> HTTP 422 from https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/External/jobs",
+    "https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/AtmosEnergy/jobs -> HTTP 422 from https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/AtmosEnergy/j",
+    "https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/Careers/jobs -> HTTP 422 from https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/Careers/jobs",
+    "https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/ExternalCareers/jobs -> HTTP 422 from https://atmosenergy.wd1.myworkdayjobs.com/wday/cxs/atmosenergy/ExternalCaree"
+   ]
   },
   {
    "name": "alcon",
    "employer": "Alcon",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/External/jobs -> HTTP 422 from https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/External/jobs",
+    "https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/Alcon/jobs -> HTTP 422 from https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/Alcon/jobs",
+    "https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/Careers/jobs -> HTTP 422 from https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/Careers/jobs",
+    "https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/ExternalCareers/jobs -> HTTP 422 from https://alcon.wd1.myworkdayjobs.com/wday/cxs/alcon/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "bnsf",
    "employer": "BNSF Railway",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/External/jobs -> HTTP 422 from https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/External/jobs",
+    "https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/BNSF/jobs -> HTTP 422 from https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/BNSF/jobs",
+    "https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/Careers/jobs -> HTTP 422 from https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/Careers/jobs",
+    "https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/ExternalCareers/jobs -> HTTP 422 from https://bnsf.wd1.myworkdayjobs.com/wday/cxs/bnsf/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "rtx",
    "employer": "RTX (Raytheon)",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/External/jobs -> HTTP 422 from https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/External/jobs",
+    "https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/RTX/jobs -> HTTP 422 from https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/RTX/jobs",
+    "https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/Careers/jobs -> HTTP 422 from https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/Careers/jobs",
+    "https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/ExternalCareers/jobs -> HTTP 422 from https://rtx.wd1.myworkdayjobs.com/wday/cxs/rtx/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "vistra",
    "employer": "Vistra",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/External/jobs -> HTTP 422 from https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/External/jobs",
+    "https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/Vistra/jobs -> HTTP 422 from https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/Vistra/jobs",
+    "https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/Careers/jobs -> HTTP 422 from https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/Careers/jobs",
+    "https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/ExternalCareers/jobs -> HTTP 422 from https://vistracorp.wd1.myworkdayjobs.com/wday/cxs/vistracorp/ExternalCareers"
+   ]
   },
   {
    "name": "murphyusa",
    "employer": "Murphy USA",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/External/jobs -> HTTP 422 from https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/External/jobs",
+    "https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/MurphyUSA/jobs -> HTTP 422 from https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/MurphyUSA/jobs",
+    "https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/Careers/jobs -> HTTP 422 from https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/Careers/jobs",
+    "https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/ExternalCareers/jobs -> HTTP 422 from https://murphyusa.wd1.myworkdayjobs.com/wday/cxs/murphyusa/ExternalCareers/j"
+   ]
   },
   {
    "name": "builders",
    "employer": "Builders FirstSource",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/External/jobs -> HTTP 422 from https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/External/jobs",
+    "https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/BFS/jobs -> HTTP 422 from https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/BFS/jobs",
+    "https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/Careers/jobs -> HTTP 422 from https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/Careers/jobs",
+    "https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/ExternalCareers/jobs -> HTTP 422 from https://bldr.wd1.myworkdayjobs.com/wday/cxs/bldr/ExternalCareers/jobs"
+   ]
   },
   {
    "name": "dallasfed",
    "employer": "Federal Reserve Bank of Dallas",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/External/jobs -> HTTP 422 from https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/External/jobs",
+    "https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/DallasFed/jobs -> HTTP 422 from https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/DallasFed/jobs",
+    "https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/Careers/jobs -> HTTP 422 from https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/Careers/jobs",
+    "https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/ExternalCareers/jobs -> HTTP 422 from https://dallasfed.wd1.myworkdayjobs.com/wday/cxs/dallasfed/ExternalCareers/j"
+   ]
   },
   {
    "name": "texashealth",
    "employer": "Texas Health Resources",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://ejpy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions -> TimeoutError: The read operation timed out (https://ejpy.fa.us2.oraclecloud.com/hcmRestApi",
+    "https://ejpy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions -> TimeoutError: The read operation timed out (https://ejpy.fa.us2.oraclecloud.com/hcmRestApi",
+    "https://ejpy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions -> TimeoutError: The read operation timed out (https://ejpy.fa.us2.oraclecloud.com/hcmRestApi",
+    "https://texashealth.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions -> TimeoutError: The read operation timed out (https://texashealth.fa.us2.oraclecloud.com/hcm"
+   ]
   },
   {
    "name": "bswhealth",
    "employer": "Baylor Scott & White Health",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/External/jobs -> HTTP 422 from https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/External/jobs",
+    "https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/BSWHealth/jobs -> HTTP 422 from https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/BSWHealth/jobs",
+    "https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/Careers/jobs -> HTTP 422 from https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/Careers/jobs",
+    "https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/ExternalCareers/jobs -> HTTP 422 from https://bswhealth.wd1.myworkdayjobs.com/wday/cxs/bswhealth/ExternalCareers/j"
+   ]
   },
   {
    "name": "goldmansachs",
    "employer": "Goldman Sachs",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/External/jobs -> HTTP 422 from https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/External/jo",
+    "https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/GS/jobs -> HTTP 422 from https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/GS/jobs",
+    "https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/Careers/jobs -> HTTP 422 from https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/Careers/job",
+    "https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/ExternalCareers/jobs -> HTTP 422 from https://goldmansachs.wd1.myworkdayjobs.com/wday/cxs/goldmansachs/ExternalCar"
+   ]
   },
   {
    "name": "ericsson",
    "employer": "Ericsson",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/External/jobs -> HTTP 422 from https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/External/jobs",
+    "https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/Ericsson/jobs -> HTTP 422 from https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/Ericsson/jobs",
+    "https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/Careers/jobs -> HTTP 422 from https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/Careers/jobs",
+    "https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/ExternalCareers/jobs -> HTTP 422 from https://ericsson.wd3.myworkdayjobs.com/wday/cxs/ericsson/ExternalCareers/job"
+   ]
   },
   {
    "name": "ey",
    "employer": "EY",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/EYCareers/jobs -> HTTP 422 from https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/EYCareers/jobs",
+    "https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/External/jobs -> HTTP 422 from https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/External/jobs",
+    "https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/EY/jobs -> HTTP 422 from https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/EY/jobs",
+    "https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/Careers/jobs -> HTTP 422 from https://eyglobal.wd1.myworkdayjobs.com/wday/cxs/eyglobal/Careers/jobs"
+   ]
   },
   {
    "name": "deloitte",
    "employer": "Deloitte",
-   "found": []
+   "found": [],
+   "errors": [
+    "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/External/jobs -> HTTP 422 from https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/External/jobs",
+    "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/Deloitte/jobs -> HTTP 422 from https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/Deloitte/jobs",
+    "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/Careers/jobs -> HTTP 422 from https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/Careers/jobs",
+    "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/ExternalCareers/jobs -> HTTP 422 from https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/ExternalCareers/job"
+   ]
+  },
+  {
+   "name": "lennox",
+   "employer": "Lennox International",
+   "found": [],
+   "errors": [
+    "https://www.lennoxcareers.com/ -> <urlopen error [Errno -2] Name or service not known>",
+    "https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/External/jobs -> HTTP 422 from https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/External/jobs",
+    "https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/Lennox/jobs -> HTTP 422 from https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/Lennox/jobs",
+    "https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/LennoxCareers/jobs -> HTTP 422 from https://lennox.wd1.myworkdayjobs.com/wday/cxs/lennox/LennoxCareers/jobs"
+   ]
+  },
+  {
+   "name": "tyler",
+   "employer": "Tyler Technologies",
+   "found": [],
+   "errors": [
+    "https://www.tylertech.com/about/careers -> HTTP Error 404: Not Found",
+    "https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/External/jobs -> HTTP 422 from https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/External/jobs",
+    "https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/Careers/jobs -> HTTP 422 from https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/Careers/jobs",
+    "https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/TylerTech/jobs -> HTTP 422 from https://tylertech.wd1.myworkdayjobs.com/wday/cxs/tylertech/TylerTech/jobs"
+   ]
+  },
+  {
+   "name": "celanese",
+   "employer": "Celanese",
+   "found": [],
+   "errors": [
+    "https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/External/jobs -> HTTP 422 from https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/External/jobs",
+    "https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/Celanese/jobs -> HTTP 422 from https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/Celanese/jobs",
+    "https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/CelaneseCareers/jobs -> HTTP 422 from https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/CelaneseCareers/job",
+    "https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/Careers/jobs -> HTTP 422 from https://celanese.wd1.myworkdayjobs.com/wday/cxs/celanese/Careers/jobs"
+   ]
+  },
+  {
+   "name": "mrcooper",
+   "employer": "Mr. Cooper Group",
+   "found": [],
+   "errors": [
+    "https://www.mrcoopergroup.com/careers -> HTTP Error 403: Forbidden",
+    "https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/External/jobs -> HTTP 422 from https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/External/jobs",
+    "https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/MrCooper/jobs -> HTTP 422 from https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/MrCooper/jobs",
+    "https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/Careers/jobs -> HTTP 422 from https://mrcooper.wd1.myworkdayjobs.com/wday/cxs/mrcooper/Careers/jobs"
+   ]
+  },
+  {
+   "name": "sabre",
+   "employer": "Sabre",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "sabre.wd1.myworkdayjobs.com",
+     "tenant": "sabre",
+     "site": "SabreJobs",
+     "total": 94,
+     "total_with_search_analyst": 45,
+     "sample": [
+      "Senior Talent Acquisition Specialist",
+      "Software Engineer II",
+      "Product Support Analyst I - VIP"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "7eleven",
+   "employer": "7-Eleven",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "7eleven.wd3.myworkdayjobs.com",
+     "tenant": "7eleven",
+     "site": "7Eleven",
+     "total": 8,
+     "total_with_search_analyst": 1,
+     "sample": [
+      "Art Director - In-house Agency",
+      "Procurement Operations and Compliance Specialist",
+      "Reconciliation Services Officer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "gmfinancial",
+   "employer": "GM Financial",
+   "found": [
+    {
+     "ats": "oracle",
+     "host": "fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com",
+     "site": "CX_1",
+     "total": 123,
+     "sample": []
+    }
+   ]
+  },
+  {
+   "name": "fanniemae",
+   "employer": "Fannie Mae",
+   "found": [],
+   "errors": [
+    "https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/External/jobs -> HTTP 404 from https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/External/jobs",
+    "https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/FannieMae/jobs -> HTTP 404 from https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/FannieMae/jobs",
+    "https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/Careers/jobs -> HTTP 404 from https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/Careers/jobs",
+    "https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/ExternalCareers/jobs -> HTTP 404 from https://fanniemae.wd1.myworkdayjobs.com/wday/cxs/fanniemae/ExternalCareers/j"
+   ]
+  },
+  {
+   "name": "frontier",
+   "employer": "Frontier Communications",
+   "found": [],
+   "errors": [
+    "https://www.frontier.com/careers -> HTTP Error 404: Not Found",
+    "https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/External/jobs -> HTTP 422 from https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/External/jobs",
+    "https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/Frontier/jobs -> HTTP 422 from https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/Frontier/jobs",
+    "https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/Careers/jobs -> HTTP 422 from https://frontier.wd1.myworkdayjobs.com/wday/cxs/frontier/Careers/jobs"
+   ]
+  },
+  {
+   "name": "usaa",
+   "employer": "USAA",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "usaa.wd1.myworkdayjobs.com",
+     "tenant": "usaa",
+     "site": "USAAJOBSWD",
+     "total": 219,
+     "total_with_search_analyst": 39,
+     "sample": [
+      "Assistant General Counsel",
+      "Protective Security Officer- Intermediate Level",
+      "Information Management Analyst Senior"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "libertymutual",
+   "employer": "Liberty Mutual",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "lmg.wd3.myworkdayjobs.com",
+     "tenant": "lmg",
+     "site": "lmg",
+     "total": 15,
+     "total_with_search_analyst": 1,
+     "sample": [
+      "CARDIOLOGUE - H/F - CDI",
+      "ASSISTANT(E) ADMINISTRATIF(VE) AU SERVICE DENTAIRE - H/F - CDI",
+      "AGENT(E) POLYVALENT(E) DES SERVICES GENERAUX - H/F - CDI"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "drhorton",
+   "employer": "D.R. Horton",
+   "found": [],
+   "errors": [
+    "https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/External/jobs -> HTTP 422 from https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/External/jobs",
+    "https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/DRHorton/jobs -> HTTP 422 from https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/DRHorton/jobs",
+    "https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/Careers/jobs -> HTTP 422 from https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/Careers/jobs",
+    "https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/ExternalCareers/jobs -> HTTP 422 from https://drhorton.wd1.myworkdayjobs.com/wday/cxs/drhorton/ExternalCareers/job"
+   ]
+  },
+  {
+   "name": "cinemark",
+   "employer": "Cinemark",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "cinemark.wd1.myworkdayjobs.com",
+     "tenant": "cinemark",
+     "site": "cinemark",
+     "total": 642,
+     "total_with_search_analyst": 12,
+     "sample": [
+      "Theatre Team Member",
+      "Server - Beer and Wine",
+      "Line Cook"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "texascapital",
+   "employer": "Texas Capital Bank",
+   "found": [
+    {
+     "ats": "workday",
+     "host": "texascapitalbank.wd12.myworkdayjobs.com",
+     "tenant": "texascapitalbank",
+     "site": "Careers",
+     "total": 104,
+     "total_with_search_analyst": 37,
+     "sample": [
+      "Financial Center Manager",
+      "Financial Relationship Consultant",
+      "Senior Treasury Management Officer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "textron",
+   "employer": "Textron (Bell)",
+   "found": [],
+   "errors": [
+    "https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/Textron/jobs -> HTTP 422 from https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/Textron/jobs",
+    "https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/Bell/jobs -> HTTP 422 from https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/Bell/jobs",
+    "https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/External/jobs -> HTTP 422 from https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/External/jobs",
+    "https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/BellCareers/jobs -> HTTP 422 from https://textron.wd1.myworkdayjobs.com/wday/cxs/textron/BellCareers/jobs"
+   ]
   }
  ]
 }
