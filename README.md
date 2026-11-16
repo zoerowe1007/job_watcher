@@ -78,13 +78,25 @@ postings is requested with a search term (last column); the pipeline refuses to 
 | Fidelity Investments | `fidelity` | Workday | `fmr.wd1.myworkdayjobs.com / FidelityCareers` | — |
 | JPMorgan Chase | `jpmorgan` | Oracle Recruiting Cloud | `jpmc.fa.oraclecloud.com / CX_1001` | `analyst` |
 | Capital One | `capitalone` | Workday | `capitalone.wd12.myworkdayjobs.com / Capital_One` | — |
+| Toyota (North America and Financial Services) | `toyota` | Workday | `toyota.wd503.myworkdayjobs.com / TMNA` | — |
 | AT&T | `att` | Workday | `att.wd1.myworkdayjobs.com / ATTGeneral` | — |
 | McKesson | `mckesson` | Workday | `mckesson.wd3.myworkdayjobs.com / External_Careers` | — |
+| Tyson Foods | `tyson` | Workday | `tysonfoods.wd5.myworkdayjobs.com / TSN` | — |
 | J.B. Hunt | `jbhunt` | Workday | `jbhunt.wd501.myworkdayjobs.com / Careers` | — |
+| George's Inc. | `georges` | Workday | `georgesinc.wd5.myworkdayjobs.com / JoinGeorges` | — |
 | Procter & Gamble | `pg` | Workday | `pg.wd5.myworkdayjobs.com / 1000` | — |
 | Kimberly-Clark | `kimberlyclark` | Workday | `kimberlyclark.wd1.myworkdayjobs.com / GLOBAL` | — |
 | Wells Fargo | `wellsfargo` | Workday | `wf.wd1.myworkdayjobs.com / WellsFargoJobs` | — |
+| Texas Instruments | `texasinstruments` | Oracle Recruiting Cloud | `edbz.fa.us2.oraclecloud.com / CX_1001` | — |
 | Southwest Airlines | `southwest` | Workday | `swa.wd1.myworkdayjobs.com / External` | — |
+| Tenet Healthcare | `tenet` | Oracle Recruiting Cloud | `eodr.fa.us2.oraclecloud.com / CX_1001` | — |
+| Sabre | `sabre` | Workday | `sabre.wd1.myworkdayjobs.com / SabreJobs` | — |
+| 7-Eleven | `7eleven` | Workday | `7eleven.wd3.myworkdayjobs.com / 7Eleven` | — |
+| GM Financial | `gmfinancial` | Oracle Recruiting Cloud | `fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com / CX_1` | — |
+| USAA | `usaa` | Workday | `usaa.wd1.myworkdayjobs.com / USAAJOBSWD` | — |
+| Liberty Mutual | `libertymutual` | Workday | `lmg.wd3.myworkdayjobs.com / lmg` | — |
+| Cinemark | `cinemark` | Workday | `cinemark.wd1.myworkdayjobs.com / cinemark` | — |
+| Texas Capital Bank | `texascapital` | Workday | `texascapitalbank.wd12.myworkdayjobs.com / Careers` | — |
 <!-- sources:end -->
 
 Endpoints used (all public, no login):

@@ -3,12 +3,24 @@
     {"name": "fidelity", "employer": "Fidelity Investments", "ats": "workday", "host": "fmr.wd1.myworkdayjobs.com", "tenant": "fmr", "site": "FidelityCareers"},
     {"name": "jpmorgan", "employer": "JPMorgan Chase", "ats": "oracle", "host": "jpmc.fa.oraclecloud.com", "site": "CX_1001", "search": "analyst"},
     {"name": "capitalone", "employer": "Capital One", "ats": "workday", "host": "capitalone.wd12.myworkdayjobs.com", "tenant": "capitalone", "site": "Capital_One"},
+    {"name": "toyota", "employer": "Toyota (North America and Financial Services)", "ats": "workday", "host": "toyota.wd503.myworkdayjobs.com", "tenant": "toyota", "site": "TMNA"},
     {"name": "att", "employer": "AT&T", "ats": "workday", "host": "att.wd1.myworkdayjobs.com", "tenant": "att", "site": "ATTGeneral"},
     {"name": "mckesson", "employer": "McKesson", "ats": "workday", "host": "mckesson.wd3.myworkdayjobs.com", "tenant": "mckesson", "site": "External_Careers"},
+    {"name": "tyson", "employer": "Tyson Foods", "ats": "workday", "host": "tysonfoods.wd5.myworkdayjobs.com", "tenant": "tysonfoods", "site": "TSN"},
     {"name": "jbhunt", "employer": "J.B. Hunt", "ats": "workday", "host": "jbhunt.wd501.myworkdayjobs.com", "tenant": "jbhunt", "site": "Careers"},
+    {"name": "georges", "employer": "George's Inc.", "ats": "workday", "host": "georgesinc.wd5.myworkdayjobs.com", "tenant": "georgesinc", "site": "JoinGeorges"},
     {"name": "pg", "employer": "Procter & Gamble", "ats": "workday", "host": "pg.wd5.myworkdayjobs.com", "tenant": "pg", "site": "1000"},
     {"name": "kimberlyclark", "employer": "Kimberly-Clark", "ats": "workday", "host": "kimberlyclark.wd1.myworkdayjobs.com", "tenant": "kimberlyclark", "site": "GLOBAL"},
     {"name": "wellsfargo", "employer": "Wells Fargo", "ats": "workday", "host": "wf.wd1.myworkdayjobs.com", "tenant": "wf", "site": "WellsFargoJobs"},
-    {"name": "southwest", "employer": "Southwest Airlines", "ats": "workday", "host": "swa.wd1.myworkdayjobs.com", "tenant": "swa", "site": "External"}
+    {"name": "texasinstruments", "employer": "Texas Instruments", "ats": "oracle", "host": "edbz.fa.us2.oraclecloud.com", "site": "CX_1001"},
+    {"name": "southwest", "employer": "Southwest Airlines", "ats": "workday", "host": "swa.wd1.myworkdayjobs.com", "tenant": "swa", "site": "External"},
+    {"name": "tenet", "employer": "Tenet Healthcare", "ats": "oracle", "host": "eodr.fa.us2.oraclecloud.com", "site": "CX_1001"},
+    {"name": "sabre", "employer": "Sabre", "ats": "workday", "host": "sabre.wd1.myworkdayjobs.com", "tenant": "sabre", "site": "SabreJobs"},
+    {"name": "7eleven", "employer": "7-Eleven", "ats": "workday", "host": "7eleven.wd3.myworkdayjobs.com", "tenant": "7eleven", "site": "7Eleven"},
+    {"name": "gmfinancial", "employer": "GM Financial", "ats": "oracle", "host": "fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com", "site": "CX_1"},
+    {"name": "usaa", "employer": "USAA", "ats": "workday", "host": "usaa.wd1.myworkdayjobs.com", "tenant": "usaa", "site": "USAAJOBSWD"},
+    {"name": "libertymutual", "employer": "Liberty Mutual", "ats": "workday", "host": "lmg.wd3.myworkdayjobs.com", "tenant": "lmg", "site": "lmg"},
+    {"name": "cinemark", "employer": "Cinemark", "ats": "workday", "host": "cinemark.wd1.myworkdayjobs.com", "tenant": "cinemark", "site": "cinemark"},
+    {"name": "texascapital", "employer": "Texas Capital Bank", "ats": "workday", "host": "texascapitalbank.wd12.myworkdayjobs.com", "tenant": "texascapitalbank", "site": "Careers"}
   ]
 }
