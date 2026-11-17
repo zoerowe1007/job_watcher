@@ -24,6 +24,12 @@ def _check_size(total, source):
             f"board lists {total} postings (> {MAX_POSTINGS}); set a 'search' term for this source")
 
 
+def _check_not_empty(total, postings):
+    """A board that says it has postings but hands back none is broken, not empty."""
+    if total > 0 and not postings:
+        raise FetchError(f"board reports {total} postings but returned none")
+
+
 # ---------------------------------------------------------------- Workday
 def fetch_workday(source, http=request_json, pause=PAUSE):
     host, tenant, site = source["host"], source["tenant"], source["site"]
@@ -48,22 +54,31 @@ def fetch_workday(source, http=request_json, pause=PAUSE):
         if not items or added == 0 or (total and offset >= total):
             break
         pause and time.sleep(pause)
+    _check_not_empty(total, postings)
     return postings
 
 
 # ----------------------------------------------------------------- Oracle
+ORACLE_EXPAND = ("requisitionList.workLocation,requisitionList.otherWorkLocations,"
+                 "requisitionList.secondaryLocations,flexFieldsFacet.values,requisitionList.requisitionFlexFields")
+
+
+def oracle_url(host, site, limit, offset, search=""):
+    """Oracle only fills in the posting list when the request asks for it with expand."""
+    finder = f"findReqs;siteNumber={site},limit={limit},offset={offset},sortBy=POSTING_DATES_DESC"
+    if search:
+        finder += f",keyword={search}"
+    return (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+            f"?onlyData=true&expand={quote(ORACLE_EXPAND, safe=',.')}&finder={quote(finder, safe=';,=')}")
+
+
 def fetch_oracle(source, http=request_json, pause=PAUSE):
     host, site = source["host"], source["site"]
     search = source.get("search") or ""
     limit, offset, total = 25, 0, 0
     postings, seen = [], set()
     for _ in range(600):
-        finder = f"findReqs;siteNumber={site},limit={limit},offset={offset},sortBy=POSTING_DATES_DESC"
-        if search:
-            finder += f",keyword={search}"
-        url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
-               f"?onlyData=true&finder={quote(finder, safe=';,=')}")
-        data = http(url)
+        data = http(oracle_url(host, site, limit, offset, search))
         block = (data.get("items") or [{}])[0]
         items = block.get("requisitionList") or []
         if offset == 0:
@@ -80,6 +95,7 @@ def fetch_oracle(source, http=request_json, pause=PAUSE):
         if not items or added == 0 or (total and offset >= total):
             break
         pause and time.sleep(pause)
+    _check_not_empty(total, postings)
     return postings
 
 

@@ -2,7 +2,11 @@ name: daily run
 
 on:
   schedule:
-    - cron: "17 8 * * *"     # every day at 08:17 UTC
+    # Three runs a day, so one that GitHub skips or delays is made up by the next.
+    # A rerun on the same UTC day replaces that day's data, so the extra runs are harmless.
+    - cron: "17 8 * * *"     # 08:17 UTC (2:17 am Central)
+    - cron: "43 14 * * *"    # 14:43 UTC (8:43 am Central)
+    - cron: "29 20 * * *"    # 20:29 UTC (2:29 pm Central)
   workflow_dispatch:          # lets me run it by hand; a second run on the same day replaces that day
 
 permissions:

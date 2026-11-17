@@ -23,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from watcher.fetchers import oracle_url  # noqa: E402
 from watcher.http import USER_AGENT, request_json  # noqa: E402
 
 WD_NUMBERS = [1, 5, 3, 12, 2, 501, 4, 103]
@@ -128,13 +129,12 @@ def probe_oracle(guess):
     found = []
     for host in guess["hosts"]:
         for site in guess.get("sites", ["CX_1001", "CX_1", "CX_1002", "CX"]):
-            url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
-                   f"?onlyData=true&finder=findReqs;siteNumber={site},limit=3,offset=0")
+            url = oracle_url(host, site, 3, 0)
             try:
                 block = (once(url).get("items") or [{}])[0]
             except Exception:  # noqa: BLE001
                 continue
-            if "TotalJobsCount" in block:
+            if "TotalJobsCount" in block and (not int(block.get("TotalJobsCount") or 0) or block.get("requisitionList")):
                 found.append({"ats": "oracle", "host": host, "site": site,
                               "total": int(block.get("TotalJobsCount") or 0),
                               "sample": [r.get("Title") for r in (block.get("requisitionList") or [])[:3]]})

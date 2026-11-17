@@ -70,8 +70,29 @@ def test_oracle_pages_and_url():
     got = fetch_oracle(OR, http=oracle_http(60, calls), pause=0)
     assert len(got) == 60
     assert len(calls) == 3
-    assert calls[0].startswith("https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1001,limit=25,offset=0")
+    assert calls[0].startswith("https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.workLocation,")
+    assert "finder=findReqs;siteNumber=CX_1001,limit=25,offset=0" in calls[0]
     assert "keyword" not in calls[0]
+
+
+def test_oracle_asks_for_the_posting_list():
+    calls = []
+    fetch_oracle(OR, http=oracle_http(3, calls), pause=0)
+    assert "expand=requisitionList" in calls[0]
+
+
+def test_oracle_total_without_postings_is_a_failure():
+    def http(url, data=None, headers=None):
+        return {"items": [{"TotalJobsCount": 918}]}
+    with pytest.raises(FetchError):
+        fetch_oracle(OR, http=http, pause=0)
+
+
+def test_workday_total_without_postings_is_a_failure():
+    def http(url, data=None, headers=None):
+        return {"total": 50, "jobPostings": []}
+    with pytest.raises(FetchError):
+        fetch_workday(WD, http=http, pause=0)
 
 
 def test_oracle_search_term_in_url():
