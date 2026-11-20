@@ -1,50 +1,50 @@
 {
-  "run_time": "2026-11-20T16:58:47Z",
+  "run_time": "2026-11-20T21:57:28Z",
   "first_run_date": "2026-11-17",
   "days_with_success": 4,
-  "open": 14501,
-  "new_today": 303,
-  "removed_today": 430,
+  "open": 14539,
+  "new_today": 518,
+  "removed_today": 616,
   "sources": [
     {
       "name": "fidelity",
       "ok": true,
-      "count": 884
+      "count": 885
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 972
+      "count": 976
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2054
+      "count": 2049
     },
     {
       "name": "toyota",
       "ok": true,
-      "count": 127
+      "count": 134
     },
     {
       "name": "att",
       "ok": true,
-      "count": 1136
+      "count": 1141
     },
     {
       "name": "mckesson",
       "ok": true,
-      "count": 690
+      "count": 695
     },
     {
       "name": "tyson",
       "ok": true,
-      "count": 753
+      "count": 771
     },
     {
       "name": "jbhunt",
       "ok": true,
-      "count": 438
+      "count": 425
     },
     {
       "name": "georges",
@@ -54,32 +54,32 @@
     {
       "name": "pg",
       "ok": true,
-      "count": 869
+      "count": 868
     },
     {
       "name": "kimberlyclark",
       "ok": true,
-      "count": 139
+      "count": 138
     },
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1541
+      "count": 1586
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 933
+      "count": 932
     },
     {
       "name": "southwest",
       "ok": true,
-      "count": 28
+      "count": 29
     },
     {
       "name": "tenet",
       "ok": true,
-      "count": 2633
+      "count": 2599
     },
     {
       "name": "sabre",
@@ -94,12 +94,12 @@
     {
       "name": "gmfinancial",
       "ok": true,
-      "count": 125
+      "count": 123
     },
     {
       "name": "usaa",
       "ok": true,
-      "count": 210
+      "count": 217
     },
     {
       "name": "libertymutual",
@@ -114,7 +114,7 @@
     {
       "name": "texascapital",
       "ok": true,
-      "count": 98
+      "count": 100
     }
   ]
 }
