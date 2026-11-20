@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-19T22:26:02Z",
+  "run_time": "2026-11-20T01:50:33Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 3,
-  "open": 14608,
-  "new_today": 567,
-  "removed_today": 540,
+  "days_with_success": 4,
+  "open": 14624,
+  "new_today": 49,
+  "removed_today": 39,
   "sources": [
     {
       "name": "fidelity",
@@ -14,37 +14,37 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 987
+      "count": 986
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2061
+      "count": 2059
     },
     {
       "name": "toyota",
       "ok": true,
-      "count": 129
+      "count": 133
     },
     {
       "name": "att",
       "ok": true,
-      "count": 1142
+      "count": 1143
     },
     {
       "name": "mckesson",
       "ok": true,
-      "count": 681
+      "count": 684
     },
     {
       "name": "tyson",
       "ok": true,
-      "count": 777
+      "count": 775
     },
     {
       "name": "jbhunt",
       "ok": true,
-      "count": 442
+      "count": 441
     },
     {
       "name": "georges",
@@ -59,17 +59,17 @@
     {
       "name": "kimberlyclark",
       "ok": true,
-      "count": 143
+      "count": 141
     },
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1554
+      "count": 1580
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 924
+      "count": 926
     },
     {
       "name": "southwest",
@@ -79,7 +79,7 @@
     {
       "name": "tenet",
       "ok": true,
-      "count": 2662
+      "count": 2651
     },
     {
       "name": "sabre",
@@ -99,7 +99,7 @@
     {
       "name": "usaa",
       "ok": true,
-      "count": 227
+      "count": 229
     },
     {
       "name": "libertymutual",
@@ -109,12 +109,12 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 644
+      "count": 643
     },
     {
       "name": "texascapital",
       "ok": true,
-      "count": 100
+      "count": 98
     }
   ]
 }
