@@ -1,50 +1,50 @@
 {
-  "run_time": "2026-11-20T01:50:33Z",
+  "run_time": "2026-11-20T16:58:47Z",
   "first_run_date": "2026-11-17",
   "days_with_success": 4,
-  "open": 14624,
-  "new_today": 49,
-  "removed_today": 39,
+  "open": 14501,
+  "new_today": 303,
+  "removed_today": 430,
   "sources": [
     {
       "name": "fidelity",
       "ok": true,
-      "count": 886
+      "count": 884
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 986
+      "count": 972
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2059
+      "count": 2054
     },
     {
       "name": "toyota",
       "ok": true,
-      "count": 133
+      "count": 127
     },
     {
       "name": "att",
       "ok": true,
-      "count": 1143
+      "count": 1136
     },
     {
       "name": "mckesson",
       "ok": true,
-      "count": 684
+      "count": 690
     },
     {
       "name": "tyson",
       "ok": true,
-      "count": 775
+      "count": 753
     },
     {
       "name": "jbhunt",
       "ok": true,
-      "count": 441
+      "count": 438
     },
     {
       "name": "georges",
@@ -54,32 +54,32 @@
     {
       "name": "pg",
       "ok": true,
-      "count": 868
+      "count": 869
     },
     {
       "name": "kimberlyclark",
       "ok": true,
-      "count": 141
+      "count": 139
     },
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1580
+      "count": 1541
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 926
+      "count": 933
     },
     {
       "name": "southwest",
       "ok": true,
-      "count": 29
+      "count": 28
     },
     {
       "name": "tenet",
       "ok": true,
-      "count": 2651
+      "count": 2633
     },
     {
       "name": "sabre",
@@ -99,7 +99,7 @@
     {
       "name": "usaa",
       "ok": true,
-      "count": 229
+      "count": 210
     },
     {
       "name": "libertymutual",
@@ -109,7 +109,7 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 643
+      "count": 644
     },
     {
       "name": "texascapital",
