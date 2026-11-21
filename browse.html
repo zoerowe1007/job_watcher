@@ -17,18 +17,27 @@
     <a class="brand" href="index.html">Job Watcher</a>
     <nav aria-label="Main">
       <ul>
-        <li><a class="link" href="index.html">Today</a></li>
-        <li><a class="link" href="browse.html" aria-current="page">Browse</a></li>
-        <li><a class="link" href="market.html">Market</a></li>
+        <li><a class="link" href="index.html">Today<small>what changed</small></a></li>
+        <li><a class="link" href="browse.html" aria-current="page">Browse<small>find a posting</small></a></li>
+        <li><a class="link" href="market.html">Market<small>the big picture</small></a></li>
       </ul>
     </nav>
   </div>
 </header>
 <div id="banner" class="banner" role="status" hidden></div>
 <section class="hero"><div class="hero-inner"><h1>Browse</h1>
-<p class="sub">Open postings from the latest run. Star a posting to keep it on your shortlist; the shortlist stays in this browser.</p></div></section>
+<p class="sub">Find open postings, narrow them down and keep a shortlist.</p></div></section>
 <main id="content">
-
+<div class="explain">
+  <h2>How to use this page</h2>
+  <p>Each line is one open posting from an employer's careers site. Start with <strong>My role</strong> (analyst roles in finance and data) or switch to <strong>All postings</strong>, then narrow it down:</p>
+  <ul>
+    <li><strong>Employer, Location, Days open:</strong> the lists show how many postings each choice has. "Days open" counts from the day the tool first saw the posting; a "+" means it was already open when tracking began.</li>
+    <li><strong>Search titles</strong> looks for words in the job title, for example "credit analyst".</li>
+    <li><strong>☆ Star</strong> a posting to add it to your shortlist, then press <em>Show shortlist only</em>. Stars stay in this browser; removed postings on your shortlist are marked.</li>
+    <li><strong>Apply</strong> opens the posting on the employer's own site.</li>
+  </ul>
+</div>
 <div class="controls">
   <div>
     <label id="scope-label">Show</label>
@@ -37,16 +46,16 @@
       <button type="button" id="scope-all" aria-pressed="false">All postings</button>
     </div>
   </div>
-  <div><label for="employer">Employer</label><select id="employer"><option value="">All employers</option></select></div>
-  <div><label for="location">Location</label><select id="location"><option value="">All locations</option></select></div>
-  <div><label for="days">Days open (since first seen)</label>
+  <div><label for="employer">Employer (number of postings)</label><select id="employer"><option value="">All employers</option></select></div>
+  <div><label for="location">Location (number of postings)</label><select id="location"><option value="">All locations</option></select></div>
+  <div><label for="days">How long it has been open</label>
     <select id="days">
       <option value="">Any</option><option value="max:1">1 day or less</option><option value="max:3">3 days or less</option>
       <option value="max:7">7 days or less</option><option value="max:14">14 days or less</option>
       <option value="min:14">More than 14 days</option><option value="min:30">More than 30 days</option>
     </select></div>
   <div><label for="q">Search titles</label><input id="q" type="search" placeholder="e.g. credit analyst" autocomplete="off"></div>
-  <div><label for="sort">Sort by first seen</label>
+  <div><label for="sort">Order by the day first seen</label>
     <select id="sort"><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
   <div><label for="only-starred">Shortlist</label>
     <button type="button" class="btn ghost" id="only-starred" aria-pressed="false">Show shortlist only (<span id="star-count">0</span>)</button></div>
@@ -54,11 +63,13 @@
 
 <div class="resultbar"><span id="count" aria-live="polite"></span><span id="note"></span></div>
 <div class="card"><ul class="posts" id="results"><li class="empty">Loading…</li></ul></div>
-
+<div id="glossary" style="margin-top:28px"></div>
+<div id="next"></div>
 </main>
 <footer>Updated every day by GitHub Actions from public employer job boards.
 <a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
 <script src="assets/common.js"></script>
+<script src="assets/guide.js"></script>
 <script>
 (function () {
   var PAGE = 100, state = { role: true, starred: false, shown: PAGE }, data, today;
@@ -139,7 +150,14 @@
   JW.loadData().then(function (d) {
     data = d; today = d.status.run_time.slice(0, 10);
     // "days open" is measured to the day of the latest run in the data
-    refreshFilters(); draw();
+    var h = JW.hash();   // links from the other pages: #scope=all|role&employer=...&days=max:1
+    if (h.scope === 'all') { state.role = false; $('scope-role').setAttribute('aria-pressed', false); $('scope-all').setAttribute('aria-pressed', true); }
+    if (h.days && $('days').querySelector('option[value="' + h.days + '"]')) $('days').value = h.days;
+    refreshFilters();
+    if (h.employer) { $('employer').value = h.employer; refreshFilters(); }
+    draw();
+    $('glossary').innerHTML = JW.guide.glossary();
+    $('next').innerHTML = JW.guide.next([['index.html', '← Today: what changed'], ['market.html', 'Market: the big picture →']]);
   }).catch(JW.showError);
 })();
 </script>
