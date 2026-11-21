@@ -17,35 +17,45 @@
     <a class="brand" href="index.html">Job Watcher</a>
     <nav aria-label="Main">
       <ul>
-        <li><a class="link" href="index.html" aria-current="page">Today</a></li>
-        <li><a class="link" href="browse.html">Browse</a></li>
-        <li><a class="link" href="market.html">Market</a></li>
+        <li><a class="link" href="index.html" aria-current="page">Today<small>what changed</small></a></li>
+        <li><a class="link" href="browse.html">Browse<small>find a posting</small></a></li>
+        <li><a class="link" href="market.html">Market<small>the big picture</small></a></li>
       </ul>
     </nav>
   </div>
 </header>
 <div id="banner" class="banner" role="status" hidden></div>
 <section class="hero"><div class="hero-inner"><h1>Today</h1>
-<p class="sub" id="runline">Loading the latest run…</p></div></section>
+<p class="sub">What changed on employer job boards in the latest check, in plain words and in numbers.</p></div></section>
 <main id="content">
 
-<section aria-label="Counts">
-  <div class="stats" id="stats"></div>
-</section>
+<div class="card explain summary" id="summary" role="status"><span id="runline">Loading the latest run…</span></div>
 
-<h2>Sources</h2>
-<div class="card" style="overflow-x:auto"><table id="sources"><thead><tr><th>Employer</th><th>Source</th><th>Status</th><th class="num">Postings</th></tr></thead><tbody></tbody></table></div>
+<h2>How the data gets here</h2>
+<div id="flow"></div>
+
+<h2>The latest run in numbers</h2>
+<section aria-label="Counts"><div class="stats" id="stats"></div></section>
+
+<h2>Employers checked</h2>
+<p class="sub">One row per employer. <span class="pill ok">ok</span> means the employer's board answered and its raw file was saved; <span class="pill bad">failed</span> means it could not be read this time, so its numbers are missing from the latest run. <strong>Open postings</strong> is how many jobs the board lists right now; <strong>New</strong> and <strong>Removed</strong> are how many appeared or disappeared in the latest run. Click an employer to see its postings.</p>
+<div class="card" style="overflow-x:auto"><table id="sources"><thead><tr><th>Employer</th><th>Status</th><th class="num" title="Jobs the employer's board lists right now">Open postings</th><th class="num" title="Postings seen for the first time in the latest run">New</th><th class="num" title="Postings that the board stopped listing in the latest run">Removed</th></tr></thead><tbody></tbody></table></div>
 
 <h2 id="new-h">New postings in the latest run</h2>
+<p class="sub" id="new-note"></p>
 <div class="card"><ul class="posts" id="new-list"></ul></div>
 
 <h2 id="removed-h">Removed postings in the latest run</h2>
+<p class="sub">Postings the employer took down since the previous run (filled, cancelled or expired). The tag <span class="pill role">my role</span> marks analyst roles in finance and data.</p>
 <div class="card"><ul class="posts" id="removed-list"></ul></div>
 
+<div style="margin-top:28px" id="glossary"></div>
+<div id="next"></div>
 </main>
 <footer>Updated every day by GitHub Actions from public employer job boards.
 <a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
 <script src="assets/common.js"></script>
+<script src="assets/guide.js"></script>
 <script>
 (function () {
   var LIMIT = 60;
@@ -64,32 +74,57 @@
     draw(LIMIT);
   }
   JW.loadData().then(function (d) {
-    var s = d.status, today = s.run_time.slice(0, 10);
-    document.getElementById('runline').textContent = 'Last run: ' + JW.runLabel(s.run_time) +
-      ' (' + new Date(s.run_time).toLocaleString() + ' your time)';
-    var cards = [
-      ['days_with_success', 'Days with a successful run', ''], ['open', 'Open postings', ''],
-      ['new_today', 'New today', 'new'], ['removed_today', 'Removed today', 'removed']];
-    document.getElementById('stats').innerHTML = cards.map(function (c) {
-      return '<div class="card stat ' + c[2] + '"><div class="num">' + JW.fmt(s[c[0]]) + '</div><div class="label">' + c[1] + '</div></div>';
-    }).join('');
-    var employer = {};
-    d.history.forEach(function (r) { employer[r.source] = r.employer; });
-    document.querySelector('#sources tbody').innerHTML = s.sources.map(function (x) {
-      return '<tr><td>' + JW.esc(employer[x.name] || '') + '</td><td>' + JW.esc(x.name) + '</td><td>' +
-        (x.ok ? '<span class="pill ok">ok</span>' : '<span class="pill bad">failed</span>' +
-          (x.error ? '<div class="err">' + JW.esc(x.error) + '</div>' : '')) +
-        '</td><td class="num">' + JW.fmt(x.count) + '</td></tr>';
-    }).join('');
+    var s = d.status, today = s.run_time.slice(0, 10), first = s.first_run_date === today;
+    var okCount = s.sources.filter(function (x) { return x.ok; }).length;
     var added = d.history.filter(function (r) { return r.first_seen === today && !r.first_run; });
     var gone = d.history.filter(function (r) { return r.removed_date === today; });
+    var addedRole = added.filter(function (r) { return r.in_role; });
+    var employer = {}, newBy = {}, goneBy = {};
+    d.history.forEach(function (r) { employer[r.source] = r.employer; });
+    added.forEach(function (r) { newBy[r.source] = (newBy[r.source] || 0) + 1; });
+    gone.forEach(function (r) { goneBy[r.source] = (goneBy[r.source] || 0) + 1; });
+
+    var html = '<b>' + JW.runLabel(s.run_time) + '</b> (' + JW.esc(new Date(s.run_time).toLocaleString()) + ' your time): the tool read <b>' + okCount + ' of ' + s.sources.length +
+      ' employer job boards</b> and found <b>' + JW.fmt(s.open) + ' open postings</b>. ';
+    if (first) {
+      html += 'This is the first day of data, so every posting counts as the starting point; new and removed postings appear from the next run. ';
+    } else {
+      html += '<b>' + JW.fmt(s.new_today) + '</b> are new since the previous run and <b>' + JW.fmt(s.removed_today) + '</b> were taken down. ' +
+        'Of the new postings, <b>' + JW.fmt(addedRole.length) + '</b> ' + (addedRole.length === 1 ? 'is' : 'are') + ' in <a href="' + JW.browseHref({ scope: 'role', days: 'max:1' }) + '">my role</a> (' + JW.esc(JW.ROLE_TEXT.split(':')[0]) + '). ';
+    }
+    if (okCount < s.sources.length) html += '<b>Not every employer could be read this time</b>; see the table below. ';
+    html += '<br><span class="small">It checks by itself several times a day, and this page loads the newest data every time you open it.</span>';
+    document.getElementById('runline').innerHTML = html;
+
+    document.getElementById('flow').innerHTML = JW.guide.flow({ employers: s.sources.length, days: s.days_with_success, rows: d.history.length });
+
+    var cards = [
+      ['days_with_success', 'Days with a successful run', '', 'Different dates that have saved data.'],
+      ['open', 'Open postings', '', 'Jobs listed on all the boards right now.'],
+      ['new_today', 'New in the latest run', 'new', 'Seen for the first time in this run.'],
+      ['removed_today', 'Removed in the latest run', 'removed', 'Listed before, no longer listed.']];
+    document.getElementById('stats').innerHTML = cards.map(function (c) {
+      return '<div class="card stat ' + c[2] + '"><div class="num">' + JW.fmt(s[c[0]]) + '</div><div class="label">' + c[1] + '</div><div class="hint">' + c[3] + '</div></div>';
+    }).join('') + '<div class="card stat new"><div class="num">' + JW.fmt(addedRole.length) + '</div><div class="label">New in my role</div><div class="hint">New postings that match the analyst title rule.</div></div>';
+
+    document.querySelector('#sources tbody').innerHTML = s.sources.map(function (x) {
+      var name = employer[x.name] || x.name;
+      return '<tr><td><a class="item" href="' + JW.browseHref({ scope: 'all', employer: name }) + '" title="Browse ' + JW.esc(name) + ' postings">' + JW.esc(name) + '</a><div class="small">source: ' + JW.esc(x.name) + '</div></td><td>' +
+        (x.ok ? '<span class="pill ok">ok</span>' : '<span class="pill bad">failed</span>' +
+          (x.error ? '<div class="err">' + JW.esc(x.error) + '</div>' : '')) +
+        '</td><td class="num">' + JW.fmt(x.count) + '</td><td class="num">' + JW.fmt(newBy[x.name] || 0) + '</td><td class="num">' + JW.fmt(goneBy[x.name] || 0) + '</td></tr>';
+    }).join('');
+
     document.getElementById('new-h').textContent = 'New postings in the latest run (' + JW.fmt(added.length) + ')';
     document.getElementById('removed-h').textContent = 'Removed postings in the latest run (' + JW.fmt(gone.length) + ')';
-    var first = s.first_run_date === today;
+    document.getElementById('new-note').innerHTML = 'Jobs the tool saw for the first time in this run. Postings in <span class="pill role">my role</span> are listed first, then by employer. Click a title to open the employer\'s own posting.' +
+      ' <a href="' + JW.browseHref({ scope: 'all', days: 'max:1' }) + '">Filter and shortlist these on Browse →</a>';
     list(document.getElementById('new-list'), added,
       first ? 'This is the first run, so every posting that was already open is the starting point. Nothing counts as new until tomorrow.'
             : 'No new postings in this run.', today);
     list(document.getElementById('removed-list'), gone, 'No postings were removed in this run.', today);
+    document.getElementById('glossary').innerHTML = JW.guide.glossary();
+    document.getElementById('next').innerHTML = JW.guide.next([['browse.html', 'Browse and shortlist postings →'], ['market.html', 'See the big picture →']]);
   }).catch(JW.showError);
 })();
 </script>
