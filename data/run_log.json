@@ -451,17 +451,17 @@
   {
    "name": "fidelity",
    "ok": true,
-   "count": 880
+   "count": 879
   },
   {
    "name": "jpmorgan",
    "ok": true,
-   "count": 973
+   "count": 968
   },
   {
    "name": "capitalone",
    "ok": true,
-   "count": 2052
+   "count": 2051
   },
   {
    "name": "toyota",
@@ -506,7 +506,7 @@
   {
    "name": "wellsfargo",
    "ok": true,
-   "count": 1546
+   "count": 1540
   },
   {
    "name": "texasinstruments",
@@ -551,7 +551,7 @@
   {
    "name": "cinemark",
    "ok": true,
-   "count": 642
+   "count": 643
   },
   {
    "name": "texascapital",
