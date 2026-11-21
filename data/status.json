@@ -1,45 +1,45 @@
 {
-  "run_time": "2026-11-20T21:57:28Z",
+  "run_time": "2026-11-21T01:40:04Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 4,
-  "open": 14539,
-  "new_today": 518,
-  "removed_today": 616,
+  "days_with_success": 5,
+  "open": 14579,
+  "new_today": 54,
+  "removed_today": 37,
   "sources": [
     {
       "name": "fidelity",
       "ok": true,
-      "count": 885
+      "count": 881
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 976
+      "count": 978
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2049
+      "count": 2050
     },
     {
       "name": "toyota",
       "ok": true,
-      "count": 134
+      "count": 133
     },
     {
       "name": "att",
       "ok": true,
-      "count": 1141
+      "count": 1142
     },
     {
       "name": "mckesson",
       "ok": true,
-      "count": 695
+      "count": 696
     },
     {
       "name": "tyson",
       "ok": true,
-      "count": 771
+      "count": 774
     },
     {
       "name": "jbhunt",
@@ -59,27 +59,27 @@
     {
       "name": "kimberlyclark",
       "ok": true,
-      "count": 138
+      "count": 139
     },
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1586
+      "count": 1625
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 932
+      "count": 934
     },
     {
       "name": "southwest",
       "ok": true,
-      "count": 29
+      "count": 30
     },
     {
       "name": "tenet",
       "ok": true,
-      "count": 2599
+      "count": 2592
     },
     {
       "name": "sabre",
@@ -94,12 +94,12 @@
     {
       "name": "gmfinancial",
       "ok": true,
-      "count": 123
+      "count": 122
     },
     {
       "name": "usaa",
       "ok": true,
-      "count": 217
+      "count": 218
     },
     {
       "name": "libertymutual",
@@ -109,12 +109,12 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 644
+      "count": 643
     },
     {
       "name": "texascapital",
       "ok": true,
-      "count": 100
+      "count": 102
     }
   ]
 }
