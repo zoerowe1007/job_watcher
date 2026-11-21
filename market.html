@@ -17,31 +17,54 @@
     <a class="brand" href="index.html">Job Watcher</a>
     <nav aria-label="Main">
       <ul>
-        <li><a class="link" href="index.html">Today</a></li>
-        <li><a class="link" href="browse.html">Browse</a></li>
-        <li><a class="link" href="market.html" aria-current="page">Market</a></li>
+        <li><a class="link" href="index.html">Today<small>what changed</small></a></li>
+        <li><a class="link" href="browse.html">Browse<small>find a posting</small></a></li>
+        <li><a class="link" href="market.html" aria-current="page">Market<small>the big picture</small></a></li>
       </ul>
     </nav>
   </div>
 </header>
 <div id="banner" class="banner" role="status" hidden></div>
 <section class="hero"><div class="hero-inner"><h1>Market</h1>
-<p class="sub" id="asof">Loading the history…</p></div></section>
+<p class="sub">The big picture: how many postings appear and disappear, which employers hire the most and how long jobs stay open.</p></div></section>
 <main id="content">
+<div class="explain">
+  <h2>How to read this page</h2>
+  <p id="asof">Loading the history…</p>
+  <ul>
+    <li>There are <strong>six findings</strong>. Each has a headline with the actual number, an <strong>"In plain words"</strong> note on what it means, the exact rule used to compute it, a chart, and (under "Show the numbers") the table behind the chart.</li>
+    <li>Early on the charts are short, because the tool has only watched for a few days. Findings about "how long postings stay open" improve as more postings come and go.</li>
+    <li><strong>All postings</strong> means every job the boards list; <strong>my role</strong> means only analyst roles in finance and data (see the glossary at the bottom).</li>
+  </ul>
+</div>
 <div id="sections"></div>
 
 </main>
 <footer>Updated every day by GitHub Actions from public employer job boards.
 <a href="https://github.com/zoerowe1007/job_watcher">Source code and data</a></footer>
 <script src="assets/common.js"></script>
+<script src="assets/guide.js"></script>
 <script src="assets/market-calc.js"></script>
 <script src="assets/charts.js"></script>
 <script>
 (function () {
   var C = JWCharts;
+  var MEAN = {
+    1: 'How many new jobs show up each day. Tall bars are busy hiring days; the darker bars are the analyst roles that matter to me.',
+    2: 'How many jobs employers take down each day, which usually means the job was filled, cancelled or expired.',
+    3: 'Which employers have the most openings right now. A big number can mean a big company, not necessarily a fast-hiring one.',
+    4: 'How long a job typically stays listed before it disappears. Short means jobs are filled or pulled quickly; the dashed line is the typical (median) case.',
+    5: 'The share of new jobs that vanish within a week: a quick read on how fast-moving the listings are.',
+    6: 'Where the open jobs are, using each employer\'s own wording for the place.'
+  };
+  var LINK = {
+    1: '<a href="browse.html#scope=all&days=max:7">See this week\'s new postings on Browse →</a>',
+    3: '<a href="browse.html#scope=all">Browse postings by employer →</a>',
+    6: '<a href="browse.html#scope=all">Browse postings by location →</a>'
+  };
   function sec(n, heading, text, legend, chart, table) {
-    return '<section class="section card" aria-labelledby="h' + n + '"><h2 id="h' + n + '">' + heading + '</h2><p>' + text + '</p>' +
-      (legend || '') + chart + table + '</section>';
+    return '<section class="section card" aria-labelledby="h' + n + '"><h2 id="h' + n + '">' + heading + '</h2><p class="meaning"><strong>In plain words:</strong> ' + MEAN[n] + '</p><p>' + text + '</p>' +
+      (legend || '') + chart + table + (LINK[n] ? '<p style="margin-top:10px">' + LINK[n] + '</p>' : '') + '</section>';
   }
   function sum(a) { return a.reduce(function (x, y) { return x + y; }, 0); }
   function legend(items) {
@@ -121,7 +144,8 @@
       '', C.bars({ rows: m.topLocations, label: 'Top locations among open postings', cls: 'bar-role' }),
       C.dataTable(['Location', 'Open postings'], m.topLocations)));
 
-    document.getElementById('sections').innerHTML = out.join('');
+    document.getElementById('sections').innerHTML = out.join('') + '<div style="margin-top:28px">' + JW.guide.glossary() + '</div>' +
+      JW.guide.next([['index.html', '← Today: what changed'], ['browse.html', 'Browse: find a posting →']]);
   }).catch(JW.showError);
 })();
 </script>

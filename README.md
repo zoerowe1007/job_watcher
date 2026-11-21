@@ -138,6 +138,7 @@ is not part of the daily pipeline.
 | `browse.html` | Browse page: filters, search, sort, apply links, starred shortlist |
 | `market.html` | Market page: six sections computed in the browser from `history.csv` |
 | `assets/style.css`, `assets/common.js`, `assets/charts.js`, `assets/market-calc.js` | Shared look, helpers, SVG charts, Market calculations |
+| `assets/guide.js` | Plain-language labels: glossary, the data-flow strip, what "my role" means, links between pages |
 | `manifest.webmanifest`, `sw.js`, `assets/icons/` | Make the site installable and usable offline |
 
 ### `data/history.csv` columns
