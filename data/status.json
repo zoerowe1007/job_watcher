@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-21T20:39:41Z",
+  "run_time": "2026-11-22T00:34:42Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 5,
-  "open": 14430,
-  "new_today": 81,
-  "removed_today": 213,
+  "days_with_success": 6,
+  "open": 14428,
+  "new_today": 1,
+  "removed_today": 3,
   "sources": [
     {
       "name": "fidelity",
@@ -29,7 +29,7 @@
     {
       "name": "att",
       "ok": true,
-      "count": 1134
+      "count": 1135
     },
     {
       "name": "mckesson",
@@ -64,7 +64,7 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1540
+      "count": 1537
     },
     {
       "name": "texasinstruments",
