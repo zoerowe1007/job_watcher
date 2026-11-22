@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-22T16:17:13Z",
+  "run_time": "2026-11-22T20:50:31Z",
   "first_run_date": "2026-11-17",
   "days_with_success": 6,
-  "open": 14361,
-  "new_today": 10,
-  "removed_today": 81,
+  "open": 14347,
+  "new_today": 16,
+  "removed_today": 102,
   "sources": [
     {
       "name": "fidelity",
       "ok": true,
-      "count": 876
+      "count": 875
     },
     {
       "name": "jpmorgan",
@@ -29,7 +29,7 @@
     {
       "name": "att",
       "ok": true,
-      "count": 1119
+      "count": 1118
     },
     {
       "name": "mckesson",
@@ -64,7 +64,7 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1495
+      "count": 1484
     },
     {
       "name": "texasinstruments",
@@ -74,7 +74,7 @@
     {
       "name": "southwest",
       "ok": true,
-      "count": 27
+      "count": 26
     },
     {
       "name": "tenet",

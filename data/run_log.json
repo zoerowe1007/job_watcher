@@ -563,7 +563,7 @@
   {
    "name": "fidelity",
    "ok": true,
-   "count": 876
+   "count": 875
   },
   {
    "name": "jpmorgan",
@@ -583,7 +583,7 @@
   {
    "name": "att",
    "ok": true,
-   "count": 1119
+   "count": 1118
   },
   {
    "name": "mckesson",
@@ -618,7 +618,7 @@
   {
    "name": "wellsfargo",
    "ok": true,
-   "count": 1495
+   "count": 1484
   },
   {
    "name": "texasinstruments",
@@ -628,7 +628,7 @@
   {
    "name": "southwest",
    "ok": true,
-   "count": 27
+   "count": 26
   },
   {
    "name": "tenet",
