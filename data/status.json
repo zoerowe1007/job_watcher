@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-22T20:50:31Z",
+  "run_time": "2026-11-23T01:02:48Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 6,
-  "open": 14347,
-  "new_today": 16,
-  "removed_today": 102,
+  "days_with_success": 7,
+  "open": 14339,
+  "new_today": 1,
+  "removed_today": 10,
   "sources": [
     {
       "name": "fidelity",
@@ -14,7 +14,7 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 968
+      "count": 966
     },
     {
       "name": "capitalone",
@@ -64,7 +64,7 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1484
+      "count": 1480
     },
     {
       "name": "texasinstruments",
@@ -99,7 +99,7 @@
     {
       "name": "usaa",
       "ok": true,
-      "count": 206
+      "count": 204
     },
     {
       "name": "libertymutual",
