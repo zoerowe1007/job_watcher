@@ -894,5 +894,117 @@
    "ok": true,
    "count": 110
   }
+ ],
+ "2026-11-25": [
+  {
+   "name": "fidelity",
+   "ok": true,
+   "count": 870
+  },
+  {
+   "name": "jpmorgan",
+   "ok": true,
+   "count": 977
+  },
+  {
+   "name": "capitalone",
+   "ok": true,
+   "count": 2060
+  },
+  {
+   "name": "toyota",
+   "ok": true,
+   "count": 144
+  },
+  {
+   "name": "att",
+   "ok": true,
+   "count": 1155
+  },
+  {
+   "name": "mckesson",
+   "ok": true,
+   "count": 697
+  },
+  {
+   "name": "tyson",
+   "ok": true,
+   "count": 755
+  },
+  {
+   "name": "jbhunt",
+   "ok": true,
+   "count": 406
+  },
+  {
+   "name": "georges",
+   "ok": true,
+   "count": 120
+  },
+  {
+   "name": "pg",
+   "ok": true,
+   "count": 881
+  },
+  {
+   "name": "kimberlyclark",
+   "ok": true,
+   "count": 135
+  },
+  {
+   "name": "wellsfargo",
+   "ok": true,
+   "count": 1542
+  },
+  {
+   "name": "texasinstruments",
+   "ok": true,
+   "count": 926
+  },
+  {
+   "name": "southwest",
+   "ok": true,
+   "count": 33
+  },
+  {
+   "name": "tenet",
+   "ok": true,
+   "count": 2492
+  },
+  {
+   "name": "sabre",
+   "ok": true,
+   "count": 92
+  },
+  {
+   "name": "7eleven",
+   "ok": true,
+   "count": 3
+  },
+  {
+   "name": "gmfinancial",
+   "ok": true,
+   "count": 121
+  },
+  {
+   "name": "usaa",
+   "ok": true,
+   "count": 202
+  },
+  {
+   "name": "libertymutual",
+   "ok": true,
+   "count": 14
+  },
+  {
+   "name": "cinemark",
+   "ok": true,
+   "count": 649
+  },
+  {
+   "name": "texascapital",
+   "ok": true,
+   "count": 110
+  }
  ]
 }
