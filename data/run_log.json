@@ -899,67 +899,67 @@
   {
    "name": "fidelity",
    "ok": true,
-   "count": 859
+   "count": 860
   },
   {
    "name": "jpmorgan",
    "ok": true,
-   "count": 963
+   "count": 964
   },
   {
    "name": "capitalone",
    "ok": true,
-   "count": 2055
+   "count": 2052
   },
   {
    "name": "toyota",
    "ok": true,
-   "count": 144
+   "count": 143
   },
   {
    "name": "att",
    "ok": true,
-   "count": 1162
+   "count": 1166
   },
   {
    "name": "mckesson",
    "ok": true,
-   "count": 697
+   "count": 701
   },
   {
    "name": "tyson",
    "ok": true,
-   "count": 752
+   "count": 755
   },
   {
    "name": "jbhunt",
    "ok": true,
-   "count": 402
+   "count": 401
   },
   {
    "name": "georges",
    "ok": true,
-   "count": 121
+   "count": 122
   },
   {
    "name": "pg",
    "ok": true,
-   "count": 877
+   "count": 873
   },
   {
    "name": "kimberlyclark",
    "ok": true,
-   "count": 139
+   "count": 137
   },
   {
    "name": "wellsfargo",
    "ok": true,
-   "count": 1556
+   "count": 1608
   },
   {
    "name": "texasinstruments",
    "ok": true,
-   "count": 929
+   "count": 916
   },
   {
    "name": "southwest",
@@ -969,7 +969,7 @@
   {
    "name": "tenet",
    "ok": true,
-   "count": 2467
+   "count": 2455
   },
   {
    "name": "sabre",
@@ -989,7 +989,7 @@
   {
    "name": "usaa",
    "ok": true,
-   "count": 195
+   "count": 204
   },
   {
    "name": "libertymutual",
@@ -999,12 +999,12 @@
   {
    "name": "cinemark",
    "ok": true,
-   "count": 648
+   "count": 647
   },
   {
    "name": "texascapital",
    "ok": true,
-   "count": 111
+   "count": 110
   }
  ]
 }
