@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-25T23:17:37Z",
+  "run_time": "2026-11-26T02:58:44Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 9,
-  "open": 14366,
-  "new_today": 357,
-  "removed_today": 414,
+  "days_with_success": 10,
+  "open": 14358,
+  "new_today": 10,
+  "removed_today": 20,
   "sources": [
     {
       "name": "fidelity",
@@ -14,7 +14,7 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 964
+      "count": 963
     },
     {
       "name": "capitalone",
@@ -29,17 +29,17 @@
     {
       "name": "att",
       "ok": true,
-      "count": 1166
+      "count": 1165
     },
     {
       "name": "mckesson",
       "ok": true,
-      "count": 701
+      "count": 697
     },
     {
       "name": "tyson",
       "ok": true,
-      "count": 755
+      "count": 756
     },
     {
       "name": "jbhunt",
@@ -54,7 +54,7 @@
     {
       "name": "pg",
       "ok": true,
-      "count": 873
+      "count": 874
     },
     {
       "name": "kimberlyclark",
@@ -64,7 +64,7 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1608
+      "count": 1606
     },
     {
       "name": "texasinstruments",
@@ -79,7 +79,7 @@
     {
       "name": "tenet",
       "ok": true,
-      "count": 2455
+      "count": 2453
     },
     {
       "name": "sabre",
