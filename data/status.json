@@ -1,35 +1,35 @@
 {
-  "run_time": "2026-11-26T02:58:44Z",
+  "run_time": "2026-11-26T18:26:27Z",
   "first_run_date": "2026-11-17",
   "days_with_success": 10,
-  "open": 14358,
-  "new_today": 10,
-  "removed_today": 20,
+  "open": 14259,
+  "new_today": 89,
+  "removed_today": 206,
   "sources": [
     {
       "name": "fidelity",
       "ok": true,
-      "count": 860
+      "count": 859
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 963
+      "count": 955
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2052
+      "count": 2054
     },
     {
       "name": "toyota",
       "ok": true,
-      "count": 143
+      "count": 139
     },
     {
       "name": "att",
       "ok": true,
-      "count": 1165
+      "count": 1160
     },
     {
       "name": "mckesson",
@@ -39,7 +39,7 @@
     {
       "name": "tyson",
       "ok": true,
-      "count": 756
+      "count": 741
     },
     {
       "name": "jbhunt",
@@ -49,12 +49,12 @@
     {
       "name": "georges",
       "ok": true,
-      "count": 122
+      "count": 121
     },
     {
       "name": "pg",
       "ok": true,
-      "count": 874
+      "count": 867
     },
     {
       "name": "kimberlyclark",
@@ -64,17 +64,17 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1606
+      "count": 1552
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 916
+      "count": 921
     },
     {
       "name": "southwest",
       "ok": true,
-      "count": 26
+      "count": 23
     },
     {
       "name": "tenet",
@@ -84,22 +84,22 @@
     {
       "name": "sabre",
       "ok": true,
-      "count": 90
+      "count": 91
     },
     {
       "name": "7eleven",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "name": "gmfinancial",
       "ok": true,
-      "count": 119
+      "count": 118
     },
     {
       "name": "usaa",
       "ok": true,
-      "count": 204
+      "count": 198
     },
     {
       "name": "libertymutual",
@@ -109,7 +109,7 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 647
+      "count": 646
     },
     {
       "name": "texascapital",
