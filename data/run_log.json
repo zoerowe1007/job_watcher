@@ -1011,17 +1011,17 @@
   {
    "name": "fidelity",
    "ok": true,
-   "count": 859
+   "count": 856
   },
   {
    "name": "jpmorgan",
    "ok": true,
-   "count": 955
+   "count": 956
   },
   {
    "name": "capitalone",
    "ok": true,
-   "count": 2054
+   "count": 2051
   },
   {
    "name": "toyota",
@@ -1036,7 +1036,7 @@
   {
    "name": "mckesson",
    "ok": true,
-   "count": 697
+   "count": 698
   },
   {
    "name": "tyson",
@@ -1056,7 +1056,7 @@
   {
    "name": "pg",
    "ok": true,
-   "count": 867
+   "count": 868
   },
   {
    "name": "kimberlyclark",
@@ -1066,12 +1066,12 @@
   {
    "name": "wellsfargo",
    "ok": true,
-   "count": 1552
+   "count": 1550
   },
   {
    "name": "texasinstruments",
    "ok": true,
-   "count": 921
+   "count": 922
   },
   {
    "name": "southwest",
