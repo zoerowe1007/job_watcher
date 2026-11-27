@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-26T23:16:54Z",
+  "run_time": "2026-11-27T03:03:54Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 10,
-  "open": 14255,
-  "new_today": 88,
-  "removed_today": 208,
+  "days_with_success": 11,
+  "open": 14250,
+  "new_today": 5,
+  "removed_today": 10,
   "sources": [
     {
       "name": "fidelity",
@@ -14,7 +14,7 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 956
+      "count": 955
     },
     {
       "name": "capitalone",
@@ -44,7 +44,7 @@
     {
       "name": "jbhunt",
       "ok": true,
-      "count": 401
+      "count": 403
     },
     {
       "name": "georges",
@@ -54,22 +54,22 @@
     {
       "name": "pg",
       "ok": true,
-      "count": 868
+      "count": 867
     },
     {
       "name": "kimberlyclark",
       "ok": true,
-      "count": 137
+      "count": 135
     },
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1550
+      "count": 1545
     },
     {
       "name": "texasinstruments",
       "ok": true,
-      "count": 922
+      "count": 923
     },
     {
       "name": "southwest",
@@ -109,7 +109,7 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 646
+      "count": 647
     },
     {
       "name": "texascapital",
