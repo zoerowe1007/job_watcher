@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-27T22:55:43Z",
+  "run_time": "2026-11-28T02:52:37Z",
   "first_run_date": "2026-11-17",
-  "days_with_success": 11,
-  "open": 14059,
-  "new_today": 99,
-  "removed_today": 318,
+  "days_with_success": 12,
+  "open": 14052,
+  "new_today": 3,
+  "removed_today": 10,
   "sources": [
     {
       "name": "fidelity",
@@ -64,7 +64,7 @@
     {
       "name": "wellsfargo",
       "ok": true,
-      "count": 1415
+      "count": 1414
     },
     {
       "name": "texasinstruments",
@@ -109,7 +109,7 @@
     {
       "name": "cinemark",
       "ok": true,
-      "count": 648
+      "count": 642
     },
     {
       "name": "texascapital",
